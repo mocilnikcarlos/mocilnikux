@@ -12,4 +12,4 @@ const GalleryProjects = () => {
   );
 };
 
-export { GalleryProjects };
+export default GalleryProjects;
