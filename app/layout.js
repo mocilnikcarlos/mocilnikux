@@ -1,3 +1,8 @@
+import { Montserrat } from "next/font/google";
+import "./globals.scss";
+
+const montserrat = Montserrat({ subsets: ["latin"] });
+
 export const metadata = {
   title: "mocilnik.ux",
   description:
@@ -6,7 +11,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body>{children}</body>
     </html>
   );

@@ -1,0 +1,17 @@
+@import "sass/main";
+
+.buttonhome {
+    font-size: 36px;
+
+    &:hover {
+        color: color("Orange");
+    }
+}
+
+.buttonpage {
+    font-size: 24px;
+
+    &.active {
+        color: color("Orange");
+    }
+}

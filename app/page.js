@@ -1,7 +1,5 @@
-import React from "react";
-
 const Page = () => {
-  return <main></main>;
+  return <main>Hola mundo</main>;
 };
 
 export default Page;

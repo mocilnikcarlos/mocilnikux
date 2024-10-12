@@ -1,0 +1,9 @@
+@import "../map/colors";
+
+@function color($color) {
+    @if map-has-key($colors, $color) {
+        @return map-get($colors, $color);
+    } @else {
+        @return "El color '#{$color}' no existe en el mapa.";
+    }
+}
