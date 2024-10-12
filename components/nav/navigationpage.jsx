@@ -1,21 +1,22 @@
 "use client";
 
-import { ButtonHome } from "../buttons/buttons";
+import { ButtonPage } from "../buttons/buttons";
 import style from "./navigation.module.scss";
 
 const navLinks = [
+  { href: "/", label: "Inicio" },
   { href: "/projects", label: "Proyectos" },
   { href: "/imagenes-ia", label: "Imágenes IA" },
   { href: "/hablemos", label: "Hablemos" },
 ];
 
-const NavigationHome = () => {
+const NavigationPage = () => {
   return (
     <nav>
-      <ul className={style.listnavhome}>
+      <ul className={style.listnavpage}>
         {navLinks.map((link) => (
           <li key={link.href}>
-            <ButtonHome href={link.href} label={link.label} />
+            <ButtonPage href={link.href} label={link.label} />
           </li>
         ))}
       </ul>
@@ -23,4 +24,4 @@ const NavigationHome = () => {
   );
 };
 
-export default NavigationHome;
+export default NavigationPage;
