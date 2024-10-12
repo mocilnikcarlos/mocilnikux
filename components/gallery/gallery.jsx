@@ -1,6 +1,6 @@
 import style from "./gallery.module.scss";
 import ProjectCard from "./ProjectCard";
-import projectsData from "./projects.json";
+import projectsData from "@/data/projects.json";
 
 const GalleryProjects = () => {
   return (
@@ -12,4 +12,4 @@ const GalleryProjects = () => {
   );
 };
 
-export default GalleryProjects;
+export { GalleryProjects };
