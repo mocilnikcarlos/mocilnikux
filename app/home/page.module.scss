@@ -1,0 +1,17 @@
+.contenthome {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 150px;
+}
+
+.meandnav {
+    display: flex;
+    align-items: center;
+    gap: 201px;
+    min-width: 1040px;
+    height: fit-content;
+}

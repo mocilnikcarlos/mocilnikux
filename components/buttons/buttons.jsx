@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import style from "./button.modules.scss";
+import style from "./button.module.scss";
 
 const ButtonHome = ({ href, label }) => {
   return (
@@ -13,7 +13,7 @@ const ButtonHome = ({ href, label }) => {
 };
 
 const ButtonPage = ({ href, label }) => {
-  const pathname = usePathname(); // Obtén la ruta actual
+  const pathname = usePathname();
   const isActive = pathname === `/${href}`;
 
   return (

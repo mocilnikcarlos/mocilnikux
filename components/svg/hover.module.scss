@@ -1,0 +1,11 @@
+@import "sass/main";
+
+.hover {
+    color: color("Gray");
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        transition: all 200ms ease-in-out;
+        color: color("Orange");
+    }
+}
