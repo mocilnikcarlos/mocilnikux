@@ -1,0 +1,59 @@
+.title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+    padding: 0 200px;
+}
+
+.imagecontainer {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.centeritem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sketch {
+    display: flex;
+    gap: 24px;
+}
+
+.gallerysketch {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: self-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.imagecontainersketch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    gap: 32px;
+}
+
+.titlesketch {
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 400;
+    text-align: center;
+}
