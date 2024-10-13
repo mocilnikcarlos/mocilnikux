@@ -5,7 +5,7 @@ import style from "./navigation.module.scss";
 
 const navLinks = [
   { href: "/projects", label: "Proyectos" },
-  { href: "/imagenes-ia", label: "Imágenes IA" },
+  { href: "/imagesia", label: "Imágenes IA" },
   { href: "/hablemos", label: "Hablemos" },
 ];
 
