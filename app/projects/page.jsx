@@ -1,4 +1,4 @@
-import GalleryProjects from "@/components/gallery/gallery";
+import { GalleryProjects } from "@/components/gallery/galleries";
 import LayoutPages from "@/components/layout/layout";
 
 const Proyectos = () => {
