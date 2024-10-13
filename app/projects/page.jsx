@@ -1,4 +1,5 @@
 import GalleryProjects from "@/components/gallery/galleryproject";
+import NavigationPage from "@/components/nav/navigationpage";
 
 const proyectosData = [
   {
@@ -7,15 +8,16 @@ const proyectosData = [
     slogan: "Solución logistica",
     company: "Diseñado en ApproachTech",
     hoverImage: "/backjuke.png",
-    imageWidth: 245.94, // Ajusta según sea necesario
-    hoverImageWidth: 200, // Ajusta según sea necesario
+    imageWidth: 245.94,
+    backgroundColor: "#F4F4F4",
+    textColor: "black",
   },
 ];
 
 const Proyectos = () => {
   return (
     <div>
-      <h1>Proyectos</h1>
+      <NavigationPage />
       <GalleryProjects items={proyectosData} />
     </div>
   );

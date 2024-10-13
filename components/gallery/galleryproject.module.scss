@@ -1,3 +1,5 @@
+@import "sass/main";
+
 .galleryprojects {
     position: relative;
     display: flex;
@@ -7,6 +9,8 @@
 
 .galleryitem {
     position: relative;
+    border-radius: 12px;
+    overflow: hidden;
 
     &:hover .hoverimage {
         opacity: 1;
@@ -18,14 +22,12 @@
 }
 
 .beforehover {
-    background-color: sandybrown;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 508px;
     height: 508px;
-    border-radius: 12px;
     transition: opacity 200ms ease-in-out;
 }
 
@@ -36,7 +38,6 @@
 }
 
 .company {
-    background-color: silver;
     position: absolute;
     display: inline-block;
     left: 0;
@@ -53,4 +54,12 @@
     left: 0;
     opacity: 0;
     transition: opacity 200ms ease-in-out;
+}
+
+.text-black {
+    color: color("Black");
+}
+
+.text-white {
+    color: color("White");
 }

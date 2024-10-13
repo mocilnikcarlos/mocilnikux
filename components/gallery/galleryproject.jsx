@@ -1,14 +1,21 @@
-// components/galleryProjects.jsx
 import Link from "next/link";
 import Image from "next/image";
 import style from "./galleryproject.module.scss";
 
 const GalleryProjects = ({ items }) => {
+  // Función para determinar la clase del texto según el color
+  const getTextClass = (color) => {
+    return color === "white" ? style.textWhite : style.textBlack;
+  };
+
   return (
     <div className={style.galleryprojects}>
       {items.map((item) => (
         <Link href={`/proyectos/${item.id}`} key={item.id}>
-          <div className={style.galleryitem}>
+          <div
+            className={style.galleryitem}
+            style={{ backgroundColor: item.backgroundColor }}
+          >
             <div className={style.beforehover}>
               <Image
                 src={item.logo}
@@ -17,8 +24,12 @@ const GalleryProjects = ({ items }) => {
                 width={item.imageWidth}
                 height={50}
               />
-              <h3 className={style.slogan}>{item.slogan}</h3>
-              <p className={style.company}>{item.company}</p>
+              <h3 className={`${style.slogan} ${getTextClass(item.textColor)}`}>
+                {item.slogan}
+              </h3>
+              <p className={`${style.company} ${getTextClass(item.textColor)}`}>
+                {item.company}
+              </p>
             </div>
             <Image
               src={item.hoverImage}
