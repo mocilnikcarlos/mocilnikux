@@ -1,0 +1,19 @@
+@import "sass/main";
+
+.buttonhome {
+    font-size: 36px;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        color: color("Orange");
+        transition: all 200ms ease-in-out;
+    }
+}
+
+.buttonpage {
+    font-size: 24px;
+
+    &.active {
+        color: color("Orange");
+    }
+}
