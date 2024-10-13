@@ -2,11 +2,11 @@ import GalleryProjects from "@/components/gallery/galleryproject";
 import NavigationPage from "@/components/nav/navigationpage";
 import style from "./project.module.scss";
 
-const proyectosData = [
+const projectsData = [
   {
-    id: "1",
+    id: "jukeapp",
     logo: "/jukeapp.png",
-    slogan: "Solución logistica",
+    slogan: "Solución logística",
     company: "Diseñado en ApproachTech",
     hoverImage: "/backjuke.png",
     imageWidth: 245.94,
@@ -14,7 +14,7 @@ const proyectosData = [
     textColor: "black",
   },
   {
-    id: "2",
+    id: "clinia",
     logo: "/clinia.png",
     slogan: "Sana en casa",
     company: "Diseñado en ApproachTech",
@@ -24,7 +24,7 @@ const proyectosData = [
     textColor: "black",
   },
   {
-    id: "3",
+    id: "fleet",
     logo: "/fleet.png",
     slogan: "Tu socio en gestión de flotas",
     company: "Diseñado en Header Solution",
@@ -34,7 +34,7 @@ const proyectosData = [
     textColor: "white",
   },
   {
-    id: "4",
+    id: "tiptap",
     logo: "/tiptap.png",
     slogan: "Haz que tus hijos ganen libertad y tú control",
     company: "Diseñado en Header Solution",
@@ -44,7 +44,7 @@ const proyectosData = [
     textColor: "white",
   },
   {
-    id: "5",
+    id: "ciclo",
     logo: "/ciclo.png",
     slogan: "Tu aliado contable",
     company: "Diseñado en DispatchSSS",
@@ -60,7 +60,7 @@ const Project = () => {
     <section className={style.contentproject}>
       <NavigationPage />
       <div className={style.gallerybox}>
-        <GalleryProjects items={proyectosData} />
+        <GalleryProjects items={projectsData} />
       </div>
     </section>
   );

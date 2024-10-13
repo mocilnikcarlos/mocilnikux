@@ -10,7 +10,7 @@ const GalleryProjects = ({ items }) => {
   return (
     <div className={style.galleryprojects}>
       {items.map((item) => (
-        <Link href={`/proyectos/${item.id}`} key={item.id}>
+        <Link href={`/projects/${item.id}`} key={item.id}>
           <div
             className={style.galleryitem}
             style={{ background: item.backgroundColor }}
