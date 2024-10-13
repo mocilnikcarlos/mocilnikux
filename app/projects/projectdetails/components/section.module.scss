@@ -1,11 +1,18 @@
 .section {
-    background-color: skyblue;
     width: 100%;
     display: flex;
     justify-content: center;
     padding-top: 180px;
+    padding-bottom: 180px;
 }
 
 .contentsection {
     width: 1040px;
+}
+
+.contentchildren {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0;
+    gap: 80px;
 }
