@@ -1,0 +1,26 @@
+@import "sass/main";
+
+.contentproblemresume {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contentlore {
+    width: 621px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.text {
+    font-size: 20px;
+    line-height: 40px;
+    color: color("Gray");
+    padding: 24px;
+}
