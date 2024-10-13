@@ -1,3 +1,4 @@
+import NameProjectFail from "../projectdetails/components/nameprojectfail";
 import JukeApp from "../projectdetails/jukeapp";
 
 const projectsData = [
@@ -66,17 +67,20 @@ const ProjectDetail = ({ params }) => {
   const project = projectsData.find((p) => p.id === params.id);
 
   if (!project) {
-    return (
-      <div>
-        <h1>Proyecto no encontrado</h1>
-        <p>Lo sentimos, no pudimos encontrar el proyecto que buscabas.</p>
-      </div>
-    );
+    const rawProjectName = decodeURIComponent(params.id);
+    const projectName =
+      rawProjectName.trim().replace(/\s+/g, " ").charAt(0).toUpperCase() +
+      rawProjectName.slice(1);
+
+    return <NameProjectFail param={projectName} />;
   }
+
+  // Importa dinámicamente el componente del proyecto
+  const ProjectComponent = require(`../projectdetails/${project.id}`).default;
 
   return (
     <div>
-      <JukeApp />
+      <ProjectComponent />
     </div>
   );
 };
