@@ -24,3 +24,14 @@
     color: color("Gray");
     padding: 24px;
 }
+
+.contentanchor {
+    display: flex;
+    justify-content: center;
+}
+
+.anchor {
+    font-size: 20px;
+    color: color("Orange");
+    text-align: center;
+}

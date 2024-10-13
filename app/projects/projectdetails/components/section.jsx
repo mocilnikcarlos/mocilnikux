@@ -36,6 +36,9 @@ const SectionDetailsProjects = ({
             title={item.title}
             body={item.body}
             imageName={item.imageName}
+            showAnchor={item.showAnchor}
+            anchorHref={item.anchorHref}
+            textlink={item.textlink}
           />
         ))}
       </div>
