@@ -63,6 +63,9 @@ const Jukeapp = () => {
       title: "Resumen",
       body: "Aún hay mucho por mejorar; este MVP es muy completo y abarca las necesidades de los actores involucrados. Sin embargo, para llegar a una conclusión más precisa, es necesario presentar este producto a usuarios reales. Aunque se mostró un gran interés, no se pudo lanzar al mercado por falta de inversión.",
       imageName: "resumejuke",
+      showAnchor: true,
+      anchorHref: "/JukeApp-v1-Presentacion.pdf",
+      textlink: "Ver presentación",
     },
     // Puedes agregar más objetos si es necesario
   ];
