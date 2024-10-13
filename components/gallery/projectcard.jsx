@@ -11,17 +11,12 @@ const ProjectCard = ({
   hoverImage,
   textColor = "black",
 }) => {
-  let textClass;
+  const textClasses = {
+    white: style.whiteText,
+    black: style.blackText,
+  };
 
-  switch (textColor) {
-    case "white":
-      textClass = style.whiteText;
-      break;
-    case "black":
-    default:
-      textClass = style.blackText;
-      break;
-  }
+  const textClass = textClasses[textColor] || textClasses.black;
 
   return (
     <div className={style.card} style={{ background: backgroundColor }}>
@@ -30,7 +25,7 @@ const ProjectCard = ({
           <div className={style.logoContainer}>
             <Image
               src={logo}
-              alt="Logo"
+              alt={`${title} logo`} // Mejora la accesibilidad
               width={508}
               height={50}
               className={style.logo}
@@ -42,7 +37,7 @@ const ProjectCard = ({
         </div>
         <Image
           src={hoverImage}
-          alt="Project"
+          alt={`Hover image for ${title}`} // Mejora la accesibilidad
           width={508}
           height={508}
           className={style.hoverImage}
