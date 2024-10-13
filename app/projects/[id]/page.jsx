@@ -27,34 +27,6 @@ const projectsData = [
     title: "Ciclo",
     description: "Aplicación contable para empresas.",
   },
-  {
-    id: "portfolio",
-    title: "Portfolio",
-    description: "Sitio web personal para mostrar proyectos y habilidades.",
-  },
-  {
-    id: "ecommerce",
-    title: "E-commerce",
-    description:
-      "Plataforma de comercio electrónico para vender productos en línea.",
-  },
-  {
-    id: "blog",
-    title: "Blog",
-    description:
-      "Sistema de gestión de contenido para crear y administrar publicaciones.",
-  },
-  {
-    id: "chatapp",
-    title: "Chat App",
-    description:
-      "Aplicación de mensajería en tiempo real para la comunicación entre usuarios.",
-  },
-  {
-    id: "weatherapp",
-    title: "Weather App",
-    description: "Aplicación para consultar el clima actual y pronósticos.",
-  },
 ];
 
 export async function generateStaticParams() {
