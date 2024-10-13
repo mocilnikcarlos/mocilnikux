@@ -2,7 +2,7 @@ import FlagArgentine from "@/components/svg/flagargentine";
 import SectionDetailsProjects from "./components/section";
 import TitleSection from "./components/titlesection";
 import ImageProject from "./components/imageproject";
-import style from "./jukeapp.module.scss";
+import style from "./projects.module.scss";
 import Image from "next/image";
 
 const imageshowcouldwe = [
@@ -60,7 +60,7 @@ const Jukeapp = () => {
 
   const summaryData = [
     {
-      title: "Resumen",
+      title: "Conclusión",
       body: "Aún hay mucho por mejorar; este MVP es muy completo y abarca las necesidades de los actores involucrados. Sin embargo, para llegar a una conclusión más precisa, es necesario presentar este producto a usuarios reales. Aunque se mostró un gran interés, no se pudo lanzar al mercado por falta de inversión.",
       imageName: "resumejuke",
       showAnchor: true,
