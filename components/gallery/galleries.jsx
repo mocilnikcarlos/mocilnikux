@@ -1,3 +1,5 @@
+"use client";
+
 import style from "./gallery.module.scss";
 import ProjectCard from "./ProjectCard";
 import projectsData from "../data/projects.json";
