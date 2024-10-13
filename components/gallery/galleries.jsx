@@ -1,5 +1,3 @@
-"use client";
-
 import style from "./gallery.module.scss";
 import ProjectCard from "./ProjectCard";
 import projectsData from "../data/projects.json";
@@ -14,4 +12,4 @@ const GalleryProjects = () => {
   );
 };
 
-export { GalleryProjects };
+export default GalleryProjects;
