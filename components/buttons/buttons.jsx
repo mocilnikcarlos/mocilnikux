@@ -14,7 +14,7 @@ const ButtonHome = ({ href, label }) => {
 
 const ButtonPage = ({ href, label }) => {
   const pathname = usePathname();
-  const isActive = pathname === `/${href}`;
+  const isActive = pathname === href;
 
   return (
     <Link

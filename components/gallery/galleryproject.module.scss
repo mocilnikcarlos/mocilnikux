@@ -1,0 +1,65 @@
+@import "sass/main";
+
+.galleryprojects {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.galleryitem {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+
+    &:hover .hoverimage {
+        opacity: 1;
+    }
+
+    &:hover .beforehover {
+        opacity: 0;
+    }
+}
+
+.beforehover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 508px;
+    height: 508px;
+    transition: opacity 200ms ease-in-out;
+}
+
+.slogan {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.company {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    bottom: 37px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.hoverimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.textblack {
+    color: color("Black");
+}
+
+.textwhite {
+    color: color("White");
+}
