@@ -1,3 +1,5 @@
+@import "sass/main";
+
 .listnavhome {
     display: flex;
     flex-direction: column;
@@ -7,4 +9,5 @@
 .listnavpage {
     display: flex;
     gap: 100px;
+    color: color("Gray");
 }
