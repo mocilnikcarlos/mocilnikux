@@ -3,9 +3,8 @@ import Image from "next/image";
 import style from "./galleryproject.module.scss";
 
 const GalleryProjects = ({ items }) => {
-  // Función para determinar la clase del texto según el color
   const getTextClass = (color) => {
-    return color === "white" ? style.textWhite : style.textBlack;
+    return color === "white" ? style.textwhite : style.textblack;
   };
 
   return (
@@ -14,7 +13,7 @@ const GalleryProjects = ({ items }) => {
         <Link href={`/proyectos/${item.id}`} key={item.id}>
           <div
             className={style.galleryitem}
-            style={{ backgroundColor: item.backgroundColor }}
+            style={{ background: item.backgroundColor }}
           >
             <div className={style.beforehover}>
               <Image
