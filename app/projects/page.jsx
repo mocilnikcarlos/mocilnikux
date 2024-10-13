@@ -1,7 +1,7 @@
 import { GalleryProjects } from "@/components/gallery/galleries";
 import LayoutPages from "@/components/layout/layout";
 
-const Proyectos = () => {
+const Projects = () => {
   return (
     <LayoutPages>
       <GalleryProjects />
@@ -9,4 +9,4 @@ const Proyectos = () => {
   );
 };
 
-export default Proyectos;
+export default Projects;

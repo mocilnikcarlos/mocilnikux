@@ -1,5 +1,4 @@
 import NavigationPage from "@/components/nav/navigationpage";
-import Footer from "@/components/footer/footer";
 import style from "./layout.module.scss";
 
 const LayoutPages = ({ children }) => {

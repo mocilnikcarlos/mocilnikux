@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import style from "./projectCard.module.scss";
+import style from "./projectcard.module.scss";
 
 const ProjectCard = ({
   logo,
