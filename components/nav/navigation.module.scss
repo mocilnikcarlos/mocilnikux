@@ -1,9 +1,21 @@
 @import "sass/main";
 
+.nav {
+    width: 331px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.menus {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .listnavhome {
     display: flex;
     flex-direction: column;
-    gap: 150px;
 }
 
 .listnavpage {
