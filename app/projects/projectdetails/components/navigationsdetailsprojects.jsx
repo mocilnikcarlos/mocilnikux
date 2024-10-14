@@ -1,25 +1,19 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import style from "./navigationsdetailsprojects.module.scss";
 import ReturnToTop from "@/components/svg/returntotop";
+import Link from "next/link";
 
 const NavigationsDetailsProjects = () => {
-  const router = useRouter();
-
-  const handleBack = () => {
-    router.back();
-  };
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <nav className={style.nav}>
-      <button onClick={handleBack} className={style.link}>
+      <Link href={"/projects"} className={style.link}>
         Volver
-      </button>
+      </Link>
       <button onClick={scrollToTop} className={style.returntotop}>
         <ReturnToTop />
       </button>

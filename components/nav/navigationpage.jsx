@@ -7,7 +7,11 @@ const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "/projects", label: "Proyectos" },
   { href: "/imagesia", label: "Imágenes IA" },
-  { href: "/hablemos", label: "Hablemos" },
+  {
+    href: "https://calendly.com/catquantum/exploremos-juntos-como-puedo-contribuir-a-tu-equipo",
+    label: "Hablemos",
+    newWindow: true,
+  },
 ];
 
 const NavigationPage = () => {
@@ -16,7 +20,11 @@ const NavigationPage = () => {
       <ul className={style.listnavpage}>
         {navLinks.map((link) => (
           <li key={link.href}>
-            <ButtonPage href={link.href} label={link.label} />
+            <ButtonPage
+              href={link.href}
+              label={link.label}
+              newWindow={link.newWindow}
+            />
           </li>
         ))}
       </ul>
