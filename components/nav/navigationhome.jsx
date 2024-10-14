@@ -13,6 +13,7 @@ const navProjets = [
 
 const navMore = [
   { href: "/imagesia", label: "Imágenes IA" },
+  { href: "/projects", label: "Todos los proyectos" },
   {
     href: "https://calendly.com/catquantum/exploremos-juntos-como-puedo-contribuir-a-tu-equipo",
     label: "Hablemos",
