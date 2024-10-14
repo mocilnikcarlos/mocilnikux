@@ -1,13 +1,26 @@
 @import "sass/main";
 
 .buttonhome {
-    font-size: 36px;
+    font-size: 24px;
     transition: all 200ms ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid color("Gray");
 
     &:hover {
         color: color("Orange");
         transition: all 200ms ease-in-out;
+
+        .arrowWrapper {
+            display: inline-block;
+        }
     }
+}
+
+.arrowWrapper {
+    display: none;
 }
 
 .buttonpage {

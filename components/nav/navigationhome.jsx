@@ -3,8 +3,15 @@
 import { ButtonHome } from "../buttons/buttons";
 import style from "./navigation.module.scss";
 
-const navLinks = [
-  { href: "/projects", label: "Proyectos" },
+const navProjets = [
+  { href: "/projects/jukeapp", label: "JukeApp" },
+  { href: "/projects/clinia", label: "Clinia" },
+  { href: "/projects/fleet", label: "FleetSolutions" },
+  { href: "/projects/tiptap", label: "TipTap" },
+  { href: "/projects/ciclo", label: "Ciclo" },
+];
+
+const navMore = [
   { href: "/imagesia", label: "Imágenes IA" },
   {
     href: "https://calendly.com/catquantum/exploremos-juntos-como-puedo-contribuir-a-tu-equipo",
@@ -15,18 +22,35 @@ const navLinks = [
 
 const NavigationHome = () => {
   return (
-    <nav>
-      <ul className={style.listnavhome}>
-        {navLinks.map((link) => (
-          <li key={link.href}>
-            <ButtonHome
-              href={link.href}
-              label={link.label}
-              newWindow={link.newWindow}
-            />
-          </li>
-        ))}
-      </ul>
+    <nav className={style.nav}>
+      <div className={style.menus}>
+        <h3>Proyectos</h3>
+        <ul className={style.listnavhome}>
+          {navProjets.map((link) => (
+            <li key={link.href}>
+              <ButtonHome
+                href={link.href}
+                label={link.label}
+                newWindow={link.newWindow}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className={style.menus}>
+        <h3>Más</h3>
+        <ul className={style.listnavhome}>
+          {navMore.map((link) => (
+            <li key={link.href}>
+              <ButtonHome
+                href={link.href}
+                label={link.label}
+                newWindow={link.newWindow}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 };

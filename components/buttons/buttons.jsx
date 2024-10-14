@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import style from "./button.module.scss";
+import ArrowRight from "../svg/arrowright";
 
 const ButtonHome = ({ href, label, newWindow = false }) => {
   return (
@@ -13,6 +14,9 @@ const ButtonHome = ({ href, label, newWindow = false }) => {
       rel={newWindow ? "noopener noreferrer" : undefined} // Seguridad adicional
     >
       {label}
+      <span className={style.arrowWrapper}>
+        <ArrowRight />
+      </span>
     </Link>
   );
 };
