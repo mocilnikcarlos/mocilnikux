@@ -13,7 +13,7 @@ const NameProjectFail = ({ param }) => {
       </p>
       <div className={style.buttons}>
         <a
-          href="/"
+          href="https://calendly.com/catquantum/exploremos-juntos-como-puedo-contribuir-a-tu-equipo"
           target="_blank"
           rel="noopener noreferrer"
           className={style.btnspeack}

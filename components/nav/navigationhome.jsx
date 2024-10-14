@@ -6,7 +6,11 @@ import style from "./navigation.module.scss";
 const navLinks = [
   { href: "/projects", label: "Proyectos" },
   { href: "/imagesia", label: "Imágenes IA" },
-  { href: "/hablemos", label: "Hablemos" },
+  {
+    href: "https://calendly.com/catquantum/exploremos-juntos-como-puedo-contribuir-a-tu-equipo",
+    label: "Hablemos",
+    newWindow: true,
+  },
 ];
 
 const NavigationHome = () => {
@@ -15,7 +19,11 @@ const NavigationHome = () => {
       <ul className={style.listnavhome}>
         {navLinks.map((link) => (
           <li key={link.href}>
-            <ButtonHome href={link.href} label={link.label} />
+            <ButtonHome
+              href={link.href}
+              label={link.label}
+              newWindow={link.newWindow}
+            />
           </li>
         ))}
       </ul>
