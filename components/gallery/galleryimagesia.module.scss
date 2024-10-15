@@ -1,3 +1,5 @@
+@import "sass/main";
+
 .galleryimageia {
     display: flex;
     flex-wrap: wrap;
@@ -6,4 +8,9 @@
 
 .image {
     border-radius: 6px;
+
+    @include respond-to("mobile") {
+        width: 100%;
+        height: auto;
+    }
 }
