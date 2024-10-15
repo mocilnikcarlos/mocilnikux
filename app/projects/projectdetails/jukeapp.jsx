@@ -104,6 +104,7 @@ const Jukeapp = () => {
           alt="Temas identificados"
           width={689}
           height={766.31}
+          className={style.whidthimage}
         />
       </div>
 
@@ -115,21 +116,31 @@ const Jukeapp = () => {
       />
 
       <div className={style.sketch}>
-        <Image src={"/flujojuke.png"} alt="Flow" width={508} height={249} />
+        <Image
+          src={"/flujojuke.png"}
+          alt="Flow"
+          width={508}
+          height={249}
+          className={style.whidthimage}
+        />
         <Image
           src={"/flujojuke-1.png"}
           alt="Flow"
           width={508}
           height={437.93}
+          className={style.whidthimage}
         />
       </div>
 
-      <Image
-        src={"/navjuke.png"}
-        alt="Estructura de la información"
-        width={1040}
-        height={502.73}
-      />
+      <div className={style.centeritem}>
+        <Image
+          src={"/navjuke.png"}
+          alt="Estructura de la información"
+          width={1040}
+          height={502.73}
+          className={style.whidthimage}
+        />
+      </div>
 
       <div className={style.gallerysketch}>
         {imagessketch.map((image, index) => (
@@ -140,7 +151,7 @@ const Jukeapp = () => {
               alt={image.alt}
               width={331}
               height={0}
-              layout="responsive"
+              className={style.whidthimagesketch}
             />
           </div>
         ))}
@@ -159,6 +170,7 @@ const Jukeapp = () => {
           alt="Paleta de colores"
           width={600}
           height={650}
+          className={style.whidthimage}
         />
       </div>
 
@@ -171,7 +183,7 @@ const Jukeapp = () => {
               alt={image.alt}
               width={331}
               height={0}
-              layout="responsive"
+              className={style.whidthimagesketch}
             />
           </div>
         ))}

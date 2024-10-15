@@ -21,7 +21,7 @@ const ProblemResumeProject = ({
               href={anchorHref}
               target="_blank"
               rel="noreferrer"
-              className={style.anchor}
+              className={style.anchorup}
             >
               {textlink}
             </a>
@@ -34,6 +34,18 @@ const ProblemResumeProject = ({
         width={331}
         height={532}
       />
+      {showAnchor && (
+        <div className={style.contentanchor}>
+          <a
+            href={anchorHref}
+            target="_blank"
+            rel="noreferrer"
+            className={style.anchordn}
+          >
+            {textlink}
+          </a>
+        </div>
+      )}
     </div>
   );
 };

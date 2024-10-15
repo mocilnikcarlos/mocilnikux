@@ -1,8 +1,16 @@
+@import "sass/main";
+
 .contentdetailsmyjob {
     padding: 24px 0;
     width: 100%;
     display: flex;
     gap: 32px;
+
+    @include respond-to("mobile") {
+        padding: 24px 16px;
+        gap: 16px;
+        flex-direction: column;
+    }
 }
 
 .text {
@@ -11,4 +19,11 @@
     justify-content: center;
     gap: 8px;
     height: 24px;
+
+    @include respond-to("mobile") {
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+    }
 }

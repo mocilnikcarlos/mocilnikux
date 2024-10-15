@@ -7,12 +7,22 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @include respond-to("mobile") {
+        padding: 24px 16px;
+        width: 100%;
+    }
 }
 
 .title {
     font-size: 36px;
     font-weight: 600;
     text-align: center;
+
+    @include respond-to("mobile") {
+        font-size: 24px;
+        width: 100%;
+    }
 }
 
 .text {
@@ -21,4 +31,10 @@
     color: color("Gray");
     padding: 24px;
     text-align: center;
+
+    @include respond-to("mobile") {
+        font-size: 14px;
+        line-height: 24px;
+        width: 100%;
+    }
 }

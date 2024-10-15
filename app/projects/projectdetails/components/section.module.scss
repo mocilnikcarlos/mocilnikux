@@ -1,13 +1,23 @@
+@import "sass/main";
+
 .section {
     width: 100%;
     display: flex;
     justify-content: center;
     padding-top: 180px;
     padding-bottom: 180px;
+
+    @include respond-to("mobile") {
+        padding: 0;
+    }
 }
 
 .contentsection {
     width: 1040px;
+
+    @include respond-to("mobile") {
+        width: 100%;
+    }
 }
 
 .contentchildren {
@@ -15,4 +25,8 @@
     flex-direction: column;
     padding: 80px 0;
     gap: 136px;
+
+    @include respond-to("mobile") {
+        gap: 32px;
+    }
 }

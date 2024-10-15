@@ -3,6 +3,7 @@ import SectionDetailsProjects from "./components/section";
 import TitleSection from "./components/titlesection";
 import Image from "next/image";
 import ImageProject from "./components/imageproject";
+import style from "./projects.module.scss";
 
 const FleetSolutions = () => {
   const problemData = [
@@ -41,19 +42,15 @@ const FleetSolutions = () => {
         }
       />
 
-      <Image
-        src={"/sprintfleet.png"}
-        alt="Sprint"
-        width={1040}
-        height={333.44}
-      />
-
-      <Image
-        src={"/userstoryfleet.png"}
-        alt="Sprint"
-        width={1040}
-        height={485.33}
-      />
+      <div className={style.centeritem}>
+        <Image
+          src={"/userstoryfleet.png"}
+          alt="Sprint"
+          width={1040}
+          height={485.33}
+          className={style.whidthimage}
+        />
+      </div>
 
       <TitleSection
         title={"User persona"}

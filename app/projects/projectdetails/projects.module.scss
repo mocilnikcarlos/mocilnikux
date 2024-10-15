@@ -1,9 +1,15 @@
+@import "sass/main";
+
 .title {
     display: flex;
     justify-content: center;
     width: 100%;
     font-size: 36px;
     font-weight: 600;
+
+    @include respond-to("mobile") {
+        font-size: 24px;
+    }
 }
 
 .gallery {
@@ -12,6 +18,12 @@
     gap: 16px;
     width: 100%;
     padding: 0 200px;
+
+    @include respond-to("mobile") {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
 }
 
 .imagecontainer {
@@ -20,6 +32,10 @@
     flex: 1 1 300px;
     position: relative;
     overflow: hidden;
+
+    @include respond-to("mobile") {
+        align-items: center;
+    }
 }
 
 .centeritem {
@@ -31,6 +47,12 @@
 .sketch {
     display: flex;
     gap: 24px;
+
+    @include respond-to("mobile") {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .gallerysketch {
@@ -39,16 +61,26 @@
     align-items: self-start;
     justify-content: space-between;
     width: 100%;
+
+    @include respond-to("mobile") {
+        flex-direction: column;
+        gap: 24px;
+    }
 }
 
 .imagecontainersketch {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
     height: auto;
     gap: 32px;
+
+    @include respond-to("mobile") {
+        width: 100%;
+    }
 }
 
 .titlesketch {
@@ -56,4 +88,20 @@
     line-height: 40px;
     font-weight: 400;
     text-align: center;
+}
+
+.whidthimage {
+    @include respond-to("mobile") {
+        width: 331px;
+        height: auto;
+    }
+}
+
+.whidthimagesketch {
+    height: auto;
+
+    @include respond-to("mobile") {
+        width: 358px;
+        height: auto;
+    }
 }
