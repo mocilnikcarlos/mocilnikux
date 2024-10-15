@@ -16,7 +16,7 @@ const navLinks = [
 
 const NavigationPage = () => {
   return (
-    <nav>
+    <nav className={style.navpages}>
       <ul className={style.listnavpage}>
         {navLinks.map((link) => (
           <li key={link.href}>

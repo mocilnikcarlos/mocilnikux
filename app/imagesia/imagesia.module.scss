@@ -1,3 +1,5 @@
+@import "sass/main";
+
 .contentimagesia {
     display: flex;
     flex-direction: column;
@@ -5,8 +7,19 @@
     padding-top: 180px;
     padding-bottom: 180px;
     gap: 136px;
+
+    @include respond-to("mobile") {
+        padding-top: 0;
+        padding-bottom: 80px;
+        gap: 0;
+    }
 }
 
 .gallerybox {
     width: 1040px;
+
+    @include respond-to("mobile") {
+        width: 100%;
+        padding: 32px 16px;
+    }
 }

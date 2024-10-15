@@ -12,6 +12,13 @@
     }
 }
 
+.navpages {
+    @include respond-to("mobile") {
+        width: 100%;
+        padding: 80px 16px 24px 16px;
+    }
+}
+
 .menus {
     display: flex;
     flex-direction: column;
@@ -37,4 +44,11 @@
     justify-content: center;
     gap: 100px;
     color: color("Gray");
+
+    @include respond-to("mobile") {
+        width: 100%;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
 }
