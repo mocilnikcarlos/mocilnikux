@@ -1,16 +1,30 @@
 @import "sass/main";
 
 .nav {
-    width: 331px;
+    width: 331;
     display: flex;
     flex-direction: column;
     gap: 32px;
+
+    @include respond-to("mobile") {
+        width: 100%;
+        padding: 32px 16px;
+    }
 }
 
 .menus {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.titlenav {
+    font-size: 24px;
+    font-weight: 700;
+
+    @include respond-to("mobile") {
+        font-size: 16px;
+    }
 }
 
 .listnavhome {

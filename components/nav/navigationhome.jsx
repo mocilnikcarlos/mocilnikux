@@ -25,7 +25,7 @@ const NavigationHome = () => {
   return (
     <nav className={style.nav}>
       <div className={style.menus}>
-        <h3>Proyectos</h3>
+        <h3 className={style.titlenav}>Proyectos</h3>
         <ul className={style.listnavhome}>
           {navProjets.map((link) => (
             <li key={link.href}>
@@ -39,7 +39,7 @@ const NavigationHome = () => {
         </ul>
       </div>
       <div className={style.menus}>
-        <h3>Más</h3>
+        <h3 className={style.titlenav}>Más</h3>
         <ul className={style.listnavhome}>
           {navMore.map((link) => (
             <li key={link.href}>

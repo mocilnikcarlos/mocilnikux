@@ -5,7 +5,13 @@ const Lore = () => {
   return (
     <div className={style.contentlore}>
       <div className={style.avatar}>
-        <Image src={"/image.png"} alt="Yo" width={240} height={240} />
+        <Image
+          src={"/image.png"}
+          alt="Yo"
+          width={240}
+          height={240}
+          className={style.responsiveimage}
+        />
         <h1 className={style.title}>mocilnik.ux</h1>
       </div>
       <p className={style.lorem}>
