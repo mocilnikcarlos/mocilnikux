@@ -1,3 +1,5 @@
+@import "sass/main";
+
 .footer {
     padding: 48px 200px;
     display: flex;
@@ -5,4 +7,8 @@
     justify-content: center;
     gap: 48px;
     width: 100%;
+
+    @include respond-to("mobile") {
+        display: none;
+    }
 }

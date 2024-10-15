@@ -14,7 +14,7 @@ const ButtonHome = ({ href, label, newWindow = false }) => {
       rel={newWindow ? "noopener noreferrer" : undefined} // Seguridad adicional
     >
       {label}
-      <span className={style.arrowWrapper}>
+      <span className={style.arrowwrapper}>
         <ArrowRight />
       </span>
     </Link>
