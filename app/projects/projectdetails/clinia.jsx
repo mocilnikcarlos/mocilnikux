@@ -103,6 +103,7 @@ const Clinia = () => {
           alt="Temas identificados"
           width={584.5}
           height={262.5}
+          className={style.whidthimage}
         />
       </div>
 
@@ -122,7 +123,7 @@ const Clinia = () => {
               alt={image.alt}
               width={331}
               height={0}
-              layout="responsive"
+              className={style.whidthimage}
             />
           </div>
         ))}
@@ -141,6 +142,7 @@ const Clinia = () => {
           alt="Paleta de colores"
           width={600}
           height={707.8}
+          className={style.whidthimage}
         />
       </div>
 
@@ -153,7 +155,7 @@ const Clinia = () => {
               alt={image.alt}
               width={331}
               height={0}
-              layout="responsive"
+              className={style.whidthimagesketch}
             />
           </div>
         ))}

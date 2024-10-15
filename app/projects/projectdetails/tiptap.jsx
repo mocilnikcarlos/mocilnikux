@@ -88,7 +88,7 @@ const Tiptap = () => {
               alt={image.alt}
               width={331}
               height={0}
-              layout="responsive"
+              className={style.whidthimagesketch}
             />
           </div>
         ))}
@@ -110,7 +110,7 @@ const Tiptap = () => {
               alt={image.alt}
               width={331}
               height={0}
-              layout="responsive"
+              className={style.whidthimagesketch}
             />
           </div>
         ))}

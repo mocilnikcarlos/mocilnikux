@@ -3,11 +3,20 @@
 .nav {
     position: relative;
     padding-bottom: 136px;
+
+    @include respond-to("mobile") {
+        padding: 80px 16px 24px 16px;
+        width: 100%;
+    }
 }
 
 .link {
     font-size: 24px;
     color: color("Orange");
+
+    @include respond-to("mobile") {
+        font-size: 16px;
+    }
 }
 
 .returntotop {
@@ -16,4 +25,8 @@
     bottom: 50px;
     cursor: pointer;
     z-index: 10;
+
+    @include respond-to("mobile") {
+        right: 10px;
+    }
 }

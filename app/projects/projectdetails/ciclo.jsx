@@ -99,6 +99,7 @@ const Ciclo = () => {
           alt="Temas identificados"
           width={689}
           height={331.2}
+          className={style.whidthimage}
         />
       </div>
 
@@ -118,7 +119,7 @@ const Ciclo = () => {
               alt={image.alt}
               width={331}
               height={0}
-              layout="responsive"
+              className={style.whidthimagesketch}
             />
           </div>
         ))}
@@ -140,7 +141,7 @@ const Ciclo = () => {
               alt={image.alt}
               width={331}
               height={0}
-              layout="responsive"
+              className={style.whidthimagesketch}
             />
           </div>
         ))}

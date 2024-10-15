@@ -3,11 +3,11 @@ import style from "./imageproject.module.scss";
 
 const ImageProject = ({ width = 1040, imageName }) => {
   return (
-    <div className={style.imagecontainer}>
+    <div className={style.imagecontainer} style={{ maxWidth: `${width}px` }}>
       <Image
         src={`/${imageName}.png`}
         alt="User Laura Jukeapp"
-        width={width}
+        width={0}
         height={0}
         layout="responsive"
       />
