@@ -44,6 +44,16 @@ const FleetSolutions = () => {
 
       <div className={style.centeritem}>
         <Image
+          src={"/sprintfleet.png"}
+          alt="Sprint"
+          width={1040}
+          height={333.44}
+          className={style.whidthimage}
+        />
+      </div>
+
+      <div className={style.centeritem}>
+        <Image
           src={"/userstoryfleet.png"}
           alt="Sprint"
           width={1040}
