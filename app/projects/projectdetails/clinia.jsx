@@ -64,8 +64,8 @@ const Clinia = () => {
       body: "A pesar de que la marca CLINIA sigue vigente y los médicos se mostraron muy satisfechos con el producto, las pruebas realizadas con algunos pacientes también indicaron un alto nivel de satisfacción en cuanto a sus necesidades. Sin embargo, el proyecto fue abandonado por falta de inversión. Existe un gran potencial para seguir mejorando e integrar las normativas gubernamentales, lo que permitiría adaptar el producto al 100% y obtener la aprobación necesaria para su regulación",
       imageName: "resumeclinia",
       showAnchor: true,
-      anchorHref: "/Clinia v1-Pitch-Deck.pdf",
-      textlink: "Ver Pitch Deck",
+      anchorHref: "https://saas.clinia.com.mx/login",
+      textlink: "Login Clinia",
     },
     // Puedes agregar más objetos si es necesario
   ];
