@@ -1,10 +1,14 @@
+import Header from "@/components/header/header";
 import Home from "./home/page";
 
 const Page = () => {
   return (
-    <main>
-      <Home />
-    </main>
+    <>
+      <Header />
+      <main>
+        <Home />
+      </main>
+    </>
   );
 };
 

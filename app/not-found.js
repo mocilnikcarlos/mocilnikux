@@ -8,7 +8,7 @@ const NotFoundPage = () => {
   const pathname = usePathname();
   const param = pathname.split("/").pop();
 
-  return <div className={style.contentnamefail}>404</div>;
+  return <div className={style.contentnamefail}>404 - che no anda</div>;
 };
 
 export default NotFoundPage;

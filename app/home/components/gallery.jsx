@@ -7,6 +7,7 @@ const Gallery = ({ images }) => {
       <div className={styles.leftColumn}>
         {images.slice(0, 2).map((image, index) => (
           <ImageWrapper
+            href={image.href}
             key={index}
             src={image.src}
             alt={`Imagen ${image.overlay.title} Izquierda`}
@@ -18,7 +19,8 @@ const Gallery = ({ images }) => {
       <div className={styles.rightColumn}>
         {images.slice(2).map((image, index) => (
           <ImageWrapper
-            key={index + 2} // Ajusta el índice para evitar duplicados
+            href={image.href}
+            key={index + 2}
             src={image.src}
             alt={`Imagen ${image.overlay.title} Derecha`}
             type={image.type}

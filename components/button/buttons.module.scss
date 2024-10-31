@@ -1,0 +1,34 @@
+@import "sass/main";
+
+.buttonNav {
+    font-size: 16px;
+    color: color("Gray");
+
+    &:hover {
+        color: color("Orange");
+    }
+}
+
+.active {
+    color: color("Orange");
+}
+
+.buttonWeb {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 8px;
+    border: 1px solid color("Orange");
+    font-size: 16px;
+    font-weight: 400;
+    color: color("Orange");
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        background-color: color("Orange");
+        border: 1px solid color("Orange");
+        font-size: 16px;
+        font-weight: 400;
+        color: color("White");
+        transition: color 0.3s ease-in-out;
+    }
+}

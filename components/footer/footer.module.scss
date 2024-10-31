@@ -1,0 +1,29 @@
+@import "sass/main";
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-top: 5px solid color("Orange");
+}
+
+.contentFooter {
+    width: 1040px;
+}
+
+.scrollToTop {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

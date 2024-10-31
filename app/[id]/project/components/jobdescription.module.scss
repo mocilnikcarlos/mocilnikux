@@ -1,0 +1,60 @@
+@import "sass/main";
+
+.sectionJobDescription {
+    width: 100%;
+    height: fit-content;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentJobDescription {
+    width: 1040px;
+    height: auto;
+    display: flex;
+    gap: 24px;
+}
+
+.listDescription {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.itemDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detailsDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: color("Orange");
+}
+
+.descriptonList {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.descriptonDetails {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+
+    .descriptonDetails {
+        white-space: pre-line; // Esto respetará los saltos de línea
+    }
+}
