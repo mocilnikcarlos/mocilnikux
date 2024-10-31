@@ -1,0 +1,17 @@
+@import "sass/main";
+
+.link {
+    font-size: 16px;
+    font-weight: 400;
+    color: cpñpr("Gray");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+        color: color("Orange");
+        transition: color 0.2s ease-in-out;
+    }
+}

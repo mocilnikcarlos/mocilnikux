@@ -1,0 +1,48 @@
+@import "sass/main";
+
+.sectionContact {
+    background-color: color("DarkGray");
+    width: 100%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.contentContact {
+    width: 1040px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    color: color("Gray");
+}
+
+.listSocial {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.socialLink {
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+}
+
+.socialLink:hover {
+    color: color("Orange");
+    transition: color 0.3s ease-in-out;
+}
+
+.socialLink:hover svg path:first-child {
+    fill: color("Orange");
+}
+
+.socialLink:hover svg path:last-child {
+    fill: color("DarkGray");
+}

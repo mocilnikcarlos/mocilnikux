@@ -1,0 +1,19 @@
+@import "sass/main";
+
+.sectionCaseStudy {
+    background-color: color("DarkGray");
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    align-items: center;
+}
+
+.listCaseStudy {
+    width: 1040px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
