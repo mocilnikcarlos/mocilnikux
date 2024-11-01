@@ -1,11 +1,10 @@
 import Footer from "@/components/footer/footer";
-import ImageHero from "./components/imagehero";
-import JobDescription from "./components/jobdescription";
-import BodyCaseStudy from "./components/bodycasestudy";
+import ImageHero from "@/components/componentspages/imagehero";
+import JobDescription from "@/components/componentspages/jobdescription";
+import BodyCaseStudy from "@/components/componentspages/bodycasestudy";
 import CliniaLogo from "@/components/svg/clinia";
 import styles from "./globalpages.module.scss";
-import ListFooter from "./components/listfooter";
-import LinkWeb from "./components/linkweb";
+import LinkWeb from "@/components/componentspages/linkweb";
 
 const descriptions = ["Clinia", "Rediseño UX/UI", "Figma"];
 

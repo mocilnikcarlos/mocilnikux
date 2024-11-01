@@ -1,10 +1,10 @@
 import Footer from "@/components/footer/footer";
-import ImageHero from "./components/imagehero";
-import JobDescription from "./components/jobdescription";
-import BodyCaseStudy from "./components/bodycasestudy";
+import ImageHero from "@/components/componentspages/imagehero";
+import JobDescription from "@/components/componentspages/jobdescription";
+import BodyCaseStudy from "@/components/componentspages/bodycasestudy";
 import FleetLogo from "@/components/svg/fleet";
 import styles from "./globalpages.module.scss";
-import LinkWeb from "./components/linkweb";
+import LinkWeb from "@/components/componentspages/linkweb";
 
 const descriptions = ["FleetSolutions", "Diseño UI", "Figma, Vuexy"];
 

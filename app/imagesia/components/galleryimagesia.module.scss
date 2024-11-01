@@ -1,0 +1,25 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.item {
+    position: relative; // Necesario para que la imagen se posicione correctamente
+    width: 100%; // Asegura que el contenedor ocupe el ancho disponible
+    padding-top: 100%; // Crea un cuadrado (alto = ancho)
+    overflow: hidden; // Oculta el desbordamiento
+
+    img {
+        position: absolute; // Para colocar la imagen correctamente
+        top: 0;
+        left: 0;
+        width: 100%; // Asegura que la imagen ocupe todo el ancho
+        height: 100%; // Asegura que la imagen ocupe todo el alto
+        object-fit: cover; // Mantiene la relación de aspecto y cubre el contenedor
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.05); // Efecto al pasar el mouse
+        }
+    }
+}
