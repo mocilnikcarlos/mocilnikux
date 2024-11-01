@@ -3,10 +3,11 @@ import GalleryImageIa from "./components/galleryimagesia";
 import ImageHero from "@/components/componentspages/imagehero";
 import IaDescription from "./components/iadescription";
 import Footer from "@/components/footer/footer";
+import LoadingWrapper from "@/components/helper/loadingwrapper";
 
 const ImagesIa = () => {
   return (
-    <>
+    <LoadingWrapper>
       <Header />
       <main>
         <ImageHero backgroundImage={"/heroimageia.jpg"} />
@@ -14,7 +15,7 @@ const ImagesIa = () => {
         <GalleryImageIa />
         <Footer />
       </main>
-    </>
+    </LoadingWrapper>
   );
 };
 
