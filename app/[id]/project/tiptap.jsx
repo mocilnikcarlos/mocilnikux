@@ -37,7 +37,7 @@ const TipTap = () => {
         <BodyCaseStudy images={images} />
       </article>
       <Footer className={styles.footer}>
-        <LinkWeb href={"/"} label={"Tiptap"} />
+        <LinkWeb href={"https://dev-school.paytiptap.com/"} label={"Tiptap"} />
         <div className={styles.divider}></div>
       </Footer>
     </>

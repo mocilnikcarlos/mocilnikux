@@ -29,7 +29,12 @@ const images = [
   { src: "/img localeyez 14.png" },
 ];
 
-const buttonData = [{ href: "/", label: "Prototipo 1" }];
+const buttonData = [
+  {
+    href: "https://www.figma.com/proto/cwmMTUcCQmtz5RCO4O55nk/Bootcamp-UX-UI-Open?node-id=695-3610&node-type=frame&viewport=555%2C216%2C0.1&t=Z3IZgPaFStojfEro-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=695%3A3610",
+    label: "Onboarding",
+  },
+];
 
 const LocalEyez = () => {
   return (

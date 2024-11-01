@@ -30,7 +30,12 @@ const images = [
   { src: "/img plantapps 13.png" },
 ];
 
-const buttonData = [{ href: "/", label: "Prototipo 1" }];
+const buttonData = [
+  {
+    href: "https://www.figma.com/proto/cwmMTUcCQmtz5RCO4O55nk/Bootcamp-UX-UI-Open?node-id=593-2942&node-type=frame&viewport=81%2C268%2C0.1&t=Z3IZgPaFStojfEro-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=593%3A2942",
+    label: "PlantApps",
+  },
+];
 
 const PlantApps = () => {
   return (

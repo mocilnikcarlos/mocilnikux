@@ -30,14 +30,6 @@ const images = [
   { src: "/img clinia 14.png" },
 ];
 
-const buttonData = [
-  { href: "/", label: "Prototipo 1" },
-  { href: "/", label: "Prototipo 2" },
-  { href: "/", label: "Prototipo 3" },
-  { href: "/", label: "Prototipo 4" },
-  { href: "/", label: "Prototipo 5" },
-];
-
 const Clinia = () => {
   return (
     <>
@@ -50,9 +42,7 @@ const Clinia = () => {
         <BodyCaseStudy images={images} />
       </article>
       <Footer className={styles.footer}>
-        <h3 className={styles.titleFooter}>Prototipos</h3>
-        <ListFooter buttons={buttonData} />
-        <LinkWeb href={"/"} label={"Clinia"} />
+        <LinkWeb href={"https://saas.clinia.com.mx/login"} label={"Clinia"} />
         <div className={styles.divider}></div>
       </Footer>
     </>

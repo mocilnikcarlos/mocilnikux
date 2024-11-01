@@ -34,7 +34,7 @@ const Fleet = () => {
         <BodyCaseStudy images={images} />
       </article>
       <Footer className={styles.footer}>
-        <LinkWeb href={"/"} label={"Fleet"} />
+        <LinkWeb href={"https://fleetsolutions.com.ar/"} label={"Fleet"} />
         <div className={styles.divider}></div>
       </Footer>
     </>
