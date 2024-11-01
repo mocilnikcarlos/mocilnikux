@@ -7,49 +7,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 24px;
     padding: 0 200px;
+    gap: 24px;
+    overflow: hidden;
+
+    @include respond-to("mobile") {
+        padding: 0 16px;
+    }
 }
 
 .title {
-    font-size: 48px;
-    font-weight: 400;
-    max-width: 100%;
+    color: color("Gray");
+    text-align: center;
+}
+
+.span {
+    color: color("Orange");
+    overflow: hidden;
     text-align: center;
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
-}
-
-.span {
-    font-weight: 600;
-    color: color("Orange");
-}
-
-.text {
-    color: color("Gray");
-    font-size: 24px;
-    text-align: center;
-}
-
-.buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: fit-content;
-    gap: 24px;
-    padding: 48px 200px;
-}
-
-.btnspeack {
-    padding: 12px 24px;
-    background-color: color("Orange");
-    border-radius: 8px;
-    color: color("White");
-    font-size: 20px;
-    line-height: 40px;
-}
-
-.btnback {
-    color: color("Gray");
 }
