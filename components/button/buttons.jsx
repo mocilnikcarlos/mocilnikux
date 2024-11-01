@@ -14,9 +14,14 @@ const ButtonNav = ({ label, href, isActive }) => {
 
 const ButtonWeb = ({ label, href }) => {
   return (
-    <Link href={href} className={styles.buttonWeb}>
+    <a
+      href={href}
+      className={styles.buttonWeb}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {label}
-    </Link>
+    </a>
   );
 };
 

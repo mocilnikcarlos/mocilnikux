@@ -1,4 +1,4 @@
-const JukeApp = () => {
+const JukeAppLogo = () => {
   return (
     <svg
       width="246"
@@ -51,4 +51,4 @@ const JukeApp = () => {
   );
 };
 
-export default JukeApp;
+export default JukeAppLogo;

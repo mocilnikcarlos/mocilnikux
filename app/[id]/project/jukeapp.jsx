@@ -32,11 +32,26 @@ const images = [
 ];
 
 const buttonData = [
-  { href: "/", label: "Prototipo 1" },
-  { href: "/", label: "Prototipo 2" },
-  { href: "/", label: "Prototipo 3" },
-  { href: "/", label: "Prototipo 4" },
-  { href: "/", label: "Prototipo 5" },
+  {
+    href: "https://www.figma.com/proto/073b2MgOsbdKPFk5NH4AMn/2023Sept.-JukeApp-v1.?node-id=10370-135840&node-type=frame&viewport=427%2C274%2C0.06&t=wuOaQTMDe0cxxc5J-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=10370%3A135840",
+    label: "Ruta de colecta App",
+  },
+  {
+    href: "https://www.figma.com/proto/073b2MgOsbdKPFk5NH4AMn/2023Sept.-JukeApp-v1.?node-id=3037-30355&node-type=frame&viewport=333%2C-361%2C0.02&t=wuOaQTMDe0cxxc5J-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=3037%3A30355",
+    label: "Crear orden",
+  },
+  {
+    href: "https://www.figma.com/proto/073b2MgOsbdKPFk5NH4AMn/2023Sept.-JukeApp-v1.?node-id=1343-6420&node-type=frame&viewport=227%2C242%2C0.02&t=wuOaQTMDe0cxxc5J-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1343%3A6420",
+    label: "Crear ruta de colecta",
+  },
+  {
+    href: "https://www.figma.com/proto/073b2MgOsbdKPFk5NH4AMn/2023Sept.-JukeApp-v1.?node-id=3796-27400&node-type=frame&viewport=392%2C236%2C0.06&t=wuOaQTMDe0cxxc5J-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=3796%3A27400",
+    label: "Zona de entrega",
+  },
+  {
+    href: "https://www.figma.com/proto/073b2MgOsbdKPFk5NH4AMn/2023Sept.-JukeApp-v1.?node-id=7854-9189&node-type=frame&viewport=370%2C321%2C0.1&t=wuOaQTMDe0cxxc5J-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=7854%3A9189",
+    label: "Mi perfil",
+  },
 ];
 
 const JukeApp = () => {
@@ -53,7 +68,11 @@ const JukeApp = () => {
       <Footer className={styles.footer}>
         <h3 className={styles.titleFooter}>Prototipos</h3>
         <ListFooter buttons={buttonData} />
-        <LinkWeb href={"/"} label={"JukeApp"} />
+        <LinkWeb
+          href={"https://app.jukeapp.co/auth/iniciar_sesion"}
+          label={"JukeApp"}
+        />
+        <div className={styles.divider}></div>
       </Footer>
     </>
   );
