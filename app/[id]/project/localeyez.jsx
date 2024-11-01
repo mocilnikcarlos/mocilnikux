@@ -1,10 +1,10 @@
 import Footer from "@/components/footer/footer";
-import ImageHero from "./components/imagehero";
-import JobDescription from "./components/jobdescription";
-import BodyCaseStudy from "./components/bodycasestudy";
+import ImageHero from "@/components/componentspages/imagehero";
+import JobDescription from "@/components/componentspages/jobdescription";
+import BodyCaseStudy from "@/components/componentspages/bodycasestudy";
 import LocalEyezLogo from "@/components/svg/localeyez";
 import styles from "./globalpages.module.scss";
-import ListFooter from "./components/listfooter";
+import ListFooter from "@/components/componentspages/listfooter";
 
 const descriptions = ["LocalEyez", "Diseño UI", "Figma"];
 

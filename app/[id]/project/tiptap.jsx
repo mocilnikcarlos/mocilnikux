@@ -1,17 +1,15 @@
 import Footer from "@/components/footer/footer";
-import ImageHero from "./components/imagehero";
-import JobDescription from "./components/jobdescription";
-import BodyCaseStudy from "./components/bodycasestudy";
+import ImageHero from "@/components/componentspages/imagehero";
+import JobDescription from "@/components/componentspages/jobdescription";
+import BodyCaseStudy from "@/components/componentspages/bodycasestudy";
 import TiptapLogo from "@/components/svg/tiptap";
 import styles from "./globalpages.module.scss";
-import LinkWeb from "./components/linkweb";
+import LinkWeb from "@/components/componentspages/linkweb";
 
-const descriptions = ["Tiptap (NAVI)", "Rediseño UX/UI", "Figma"];
+const descriptions = ["Tiptap", "Diseño UI", "Figma, Vuexy"];
 
 const details = {
-  description: `Tiptap es un TMS logístico que gestiona paquetes de Mercado Libre y otros vendedores. También proporciona una app para que los repartidores realicen colectas y entregas.
-
-  Rediseñé el proyecto debido a que el original presentaba incoherencia en los flujos y la UI.`,
+  description: `El producto es completamente personalizado, desarrollado en etapas y perfeccionado a través de múltiples reuniones. No se trata de un producto convencional; fui convocado principalmente para diseñar una interfaz de usuario dentro del ecosistema de Tiptap y proporcionar una herramienta de gestión para los colegios que son clientes de Tiptap.`,
 };
 
 const images = [
