@@ -14,6 +14,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include respond-to("mobile") {
+        justify-content: center;
+    }
 }
 
 .title {
@@ -21,6 +25,10 @@
     font-weight: 700;
     line-height: 40px;
     color: color("Gray");
+
+    @include respond-to("mobile") {
+        display: none;
+    }
 }
 
 .listSocial {

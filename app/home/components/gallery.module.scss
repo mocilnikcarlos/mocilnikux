@@ -1,6 +1,13 @@
+@import "sass/main";
+
 .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @include respond-to("mobile") {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .leftColumn,

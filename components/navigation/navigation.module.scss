@@ -1,4 +1,12 @@
+@import "sass/main";
+
 .listnav {
     display: flex;
     gap: 32px;
+
+    @include respond-to("mobile") {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0;
+    }
 }
