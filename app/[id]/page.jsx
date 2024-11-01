@@ -8,6 +8,7 @@ import BullMarket from "./project/bullmarket";
 import Pandora from "./project/pandora";
 import PlantApps from "./project/plantapps";
 import Header from "@/components/header/header";
+import LoadingWrapper from "@/components/helper/loadingwrapper";
 
 export async function generateStaticParams() {
   const projects = [
@@ -44,12 +45,12 @@ const ProjectPage = ({ params }) => {
   }
 
   return (
-    <>
+    <LoadingWrapper>
       <Header />
       <main>
         <ProjectComponent />
       </main>
-    </>
+    </LoadingWrapper>
   );
 };
 
