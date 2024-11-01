@@ -18,4 +18,8 @@
     width: 1040px;
     height: 1px;
     background-color: color("White");
+
+    @include respond-to("mobile") {
+        width: 100%;
+    }
 }

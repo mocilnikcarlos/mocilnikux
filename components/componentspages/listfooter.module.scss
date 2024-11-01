@@ -1,7 +1,15 @@
+@import "sass/main";
+
 .listButtons {
     display: flex;
     justify-content: space-between;
     align-self: center;
     width: 100%;
     height: fit-content;
+
+    @include respond-to("mobile") {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
 }

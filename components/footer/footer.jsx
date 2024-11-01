@@ -5,14 +5,23 @@ import styles from "./footer.module.scss";
 
 const Footer = ({ children, className }) => {
   const scrollToTop = () => {
-    const scrollStep = -window.scrollY / (400 / 15);
+    const totalScrollDistance = window.scrollY;
+    const duration = 600;
+    const stepTime = 15;
+    const totalSteps = Math.floor(duration / stepTime);
+    const scrollStep = totalScrollDistance / totalSteps;
+
+    let currentStep = 0;
+
     const scrollInterval = setInterval(() => {
-      if (window.scrollY !== 0) {
-        window.scrollBy(0, scrollStep);
+      if (currentStep < totalSteps) {
+        window.scrollBy(0, -scrollStep);
+        currentStep++;
       } else {
         clearInterval(scrollInterval);
+        window.scrollTo(0, 0);
       }
-    }, 15);
+    }, stepTime);
   };
 
   return (
