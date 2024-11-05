@@ -13,7 +13,7 @@ const details = {
 };
 
 const images = [
-  { src: "/img tiptap 1.png" },
+  { src: "/img tiptap 1fix.png" },
   { src: "/img tiptap 2.png" },
   { src: "/img tiptap 3.png" },
   { src: "/img tiptap 4.png" },
