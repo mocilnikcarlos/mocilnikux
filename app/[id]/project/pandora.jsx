@@ -28,7 +28,7 @@ const Pandora = () => {
     <>
       <article>
         <ImageHero
-          backgroundImage="/Pandora.png"
+          backgroundImage="/pandora.png"
           LogoComponent={<PandoraLogo />}
         />
         <JobDescription descriptions={descriptions} details={details} />
