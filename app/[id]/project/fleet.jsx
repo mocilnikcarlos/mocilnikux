@@ -15,14 +15,14 @@ const details = {
 };
 
 const images = [
-  { src: "/img fleet 1.png" },
-  { src: "/img fleet 2.png" },
-  { src: "/img fleet 3.png" },
-  { src: "/img fleet 4.png" },
-  { src: "/img fleet 5.png" },
-  { src: "/img fleet 6.png" },
-  { src: "/img fleet 7.png" },
-  { src: "/img fleet 8.png" },
+  { src: "/imgfleet1.png" },
+  { src: "/imgfleet2.png" },
+  { src: "/imgfleet3.png" },
+  { src: "/imgfleet4.png" },
+  { src: "/imgfleet5.png" },
+  { src: "/imgfleet6.png" },
+  { src: "/imgfleet7.png" },
+  { src: "/imgfleet8.png" },
 ];
 
 const Fleet = () => {

@@ -15,12 +15,12 @@ const details = {
 };
 
 const images = [
-  { src: "/img pandora 1.png" },
-  { src: "/img pandora 2.png" },
-  { src: "/img pandora 3.png" },
-  { src: "/img pandora 4.png" },
-  { src: "/img pandora 5.png" },
-  { src: "/img pandora 6.png" },
+  { src: "/imgpandora1.png" },
+  { src: "/imgpandora2.png" },
+  { src: "/imgpandora3.png" },
+  { src: "/imgpandora4.png" },
+  { src: "/imgpandora5.png" },
+  { src: "/imgpandora6.png" },
 ];
 
 const Pandora = () => {

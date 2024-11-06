@@ -13,20 +13,20 @@ const details = {
 };
 
 const images = [
-  { src: "/img clinia 1.png" },
-  { src: "/img clinia 2.png" },
-  { src: "/img clinia 3.png" },
-  { src: "/img clinia 4.png" },
-  { src: "/img clinia 5.png" },
-  { src: "/img clinia 6.png" },
-  { src: "/img clinia 7.png" },
-  { src: "/img clinia 8.png" },
-  { src: "/img clinia 9.png" },
-  { src: "/img clinia 10.png" },
-  { src: "/img clinia 11.png" },
-  { src: "/img clinia 12.png" },
-  { src: "/img clinia 13.png" },
-  { src: "/img clinia 14.png" },
+  { src: "/imgclinia1.png" },
+  { src: "/imgclinia2.png" },
+  { src: "/imgclinia3.png" },
+  { src: "/imgclinia4.png" },
+  { src: "/imgclinia5.png" },
+  { src: "/imgclinia6.png" },
+  { src: "/imgclinia7.png" },
+  { src: "/imgclinia8.png" },
+  { src: "/imgclinia9.png" },
+  { src: "/imgclinia10.png" },
+  { src: "/imgclinia11.png" },
+  { src: "/imgclinia12.png" },
+  { src: "/imgclinia13.png" },
+  { src: "/imgclinia14.png" },
 ];
 
 const Clinia = () => {

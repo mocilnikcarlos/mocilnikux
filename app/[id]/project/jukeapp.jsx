@@ -16,19 +16,19 @@ const details = {
 };
 
 const images = [
-  { src: "/img jukeapp 1.png" },
-  { src: "/img jukeapp 2.png" },
-  { src: "/img jukeapp 3.png" },
-  { src: "/img jukeapp 4.png" },
-  { src: "/img jukeapp 5.png" },
-  { src: "/img jukeapp 6.png" },
-  { src: "/img jukeapp 7.png" },
-  { src: "/img jukeapp 8.png" },
-  { src: "/img jukeapp 9.png" },
-  { src: "/img jukeapp 10.png" },
-  { src: "/img jukeapp 11.png" },
-  { src: "/img jukeapp 12.png" },
-  { src: "/img jukeapp 13.png" },
+  { src: "/imgjukeapp1.png" },
+  { src: "/imgjukeapp2.png" },
+  { src: "/imgjukeapp3.png" },
+  { src: "/imgjukeapp4.png" },
+  { src: "/imgjukeapp5.png" },
+  { src: "/imgjukeapp6.png" },
+  { src: "/imgjukeapp7.png" },
+  { src: "/imgjukeapp8.png" },
+  { src: "/imgjukeapp9.png" },
+  { src: "/imgjukeapp10.png" },
+  { src: "/imgjukeapp11.png" },
+  { src: "/imgjukeapp12.png" },
+  { src: "/imgjukeapp13.png" },
 ];
 
 const buttonData = [

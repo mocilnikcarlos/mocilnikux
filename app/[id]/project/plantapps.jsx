@@ -15,19 +15,19 @@ const details = {
 };
 
 const images = [
-  { src: "/img plantapps 1.png" },
-  { src: "/img plantapps 2.png" },
-  { src: "/img plantapps 3.png" },
-  { src: "/img plantapps 4.png" },
-  { src: "/img plantapps 5.png" },
-  { src: "/img plantapps 6.png" },
-  { src: "/img plantapps 7.png" },
-  { src: "/img plantapps 8.png" },
-  { src: "/img plantapps 9.png" },
-  { src: "/img plantapps 10.png" },
-  { src: "/img plantapps 11.png" },
-  { src: "/img plantapps 12.png" },
-  { src: "/img plantapps 13.png" },
+  { src: "/imgplantapps1.png" },
+  { src: "/imgplantapps2.png" },
+  { src: "/imgplantapps3.png" },
+  { src: "/imgplantapps4.png" },
+  { src: "/imgplantapps5.png" },
+  { src: "/imgplantapps6.png" },
+  { src: "/imgplantapps7.png" },
+  { src: "/imgplantapps8.png" },
+  { src: "/imgplantapps9.png" },
+  { src: "/imgplantapps10.png" },
+  { src: "/imgplantapps11.png" },
+  { src: "/imgplantapps12.png" },
+  { src: "/imgplantapps13.png" },
 ];
 
 const buttonData = [

@@ -15,16 +15,16 @@ const details = {
 };
 
 const images = [
-  { src: "/img bullmarket 1.png" },
-  { src: "/img bullmarket 2.png" },
-  { src: "/img bullmarket 3.png" },
-  { src: "/img bullmarket 4.png" },
-  { src: "/img bullmarket 5.png" },
-  { src: "/img bullmarket 6.png" },
-  { src: "/img bullmarket 7.png" },
-  { src: "/img bullmarket 8.png" },
-  { src: "/img bullmarket 9.png" },
-  { src: "/img bullmarket 10.png" },
+  { src: "/imgbullmarket1.png" },
+  { src: "/imgbullmarket2.png" },
+  { src: "/imgbullmarket3.png" },
+  { src: "/imgbullmarket4.png" },
+  { src: "/imgbullmarket5.png" },
+  { src: "/imgbullmarket6.png" },
+  { src: "/imgbullmarket7.png" },
+  { src: "/imgbullmarket8.png" },
+  { src: "/imgbullmarket9.png" },
+  { src: "/imgbullmarket10.png" },
 ];
 
 const BullMarket = () => {

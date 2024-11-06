@@ -13,14 +13,14 @@ const details = {
 };
 
 const images = [
-  { src: "/img tiptap 1fix.png" },
-  { src: "/img tiptap 2.png" },
-  { src: "/img tiptap 3.png" },
-  { src: "/img tiptap 4.png" },
-  { src: "/img tiptap 5.png" },
-  { src: "/img tiptap 6.png" },
-  { src: "/img tiptap 7.png" },
-  { src: "/img tiptap 8.png" },
+  { src: "/imgtiptap1.png" },
+  { src: "/imgtiptap2.png" },
+  { src: "/imgtiptap3.png" },
+  { src: "/imgtiptap4.png" },
+  { src: "/imgtiptap5.png" },
+  { src: "/imgtiptap6.png" },
+  { src: "/imgtiptap7.png" },
+  { src: "/imgtiptap8.png" },
 ];
 
 const TipTap = () => {

@@ -13,20 +13,20 @@ const details = {
 };
 
 const images = [
-  { src: "/img localeyez 1.png" },
-  { src: "/img localeyez 2.png" },
-  { src: "/img localeyez 3.png" },
-  { src: "/img localeyez 4.png" },
-  { src: "/img localeyez 5.png" },
-  { src: "/img localeyez 6.png" },
-  { src: "/img localeyez 7.png" },
-  { src: "/img localeyez 8.png" },
-  { src: "/img localeyez 9.png" },
-  { src: "/img localeyez 10.png" },
-  { src: "/img localeyez 11.png" },
-  { src: "/img localeyez 12.png" },
-  { src: "/img localeyez 13.png" },
-  { src: "/img localeyez 14.png" },
+  { src: "/imglocaleyez1.png" },
+  { src: "/imglocaleyez2.png" },
+  { src: "/imglocaleyez3.png" },
+  { src: "/imglocaleyez4.png" },
+  { src: "/imglocaleyez5.png" },
+  { src: "/imglocaleyez6.png" },
+  { src: "/imglocaleyez7.png" },
+  { src: "/imglocaleyez8.png" },
+  { src: "/imglocaleyez9.png" },
+  { src: "/imglocaleyez10.png" },
+  { src: "/imglocaleyez11.png" },
+  { src: "/imglocaleyez12.png" },
+  { src: "/imglocaleyez13.png" },
+  { src: "/imglocaleyez14.png" },
 ];
 
 const buttonData = [
