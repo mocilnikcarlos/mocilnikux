@@ -32,3 +32,28 @@
         transition: color 0.3s ease-in-out;
     }
 }
+
+.btnpath {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    background-color: rgba(217, 123, 41, 0.04);
+    backdrop-filter: blur(4px);
+    border: 1px solid color("Orange");
+    border-radius: 8px;
+    stroke: color("Orange");
+    transition:
+        background-color 0.3s ease-in-out,
+        stroke 0.3s ease-in-out;
+
+    &:hover {
+        background-color: color("Orange");
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    &:hover path {
+        stroke: color("White");
+        transition: stroke 0.3s ease-in-out;
+    }
+}

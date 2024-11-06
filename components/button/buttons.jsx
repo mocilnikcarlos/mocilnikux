@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./buttons.module.scss";
+import BtnClose from "../svg/btnclose";
 
 const ButtonNav = ({ label, href, isActive }) => {
   return (
@@ -25,4 +26,12 @@ const ButtonWeb = ({ label, href }) => {
   );
 };
 
-export { ButtonNav, ButtonWeb };
+const ButtonAction = ({ onClick, className }) => {
+  return (
+    <button className={`${styles.btnpath} ${className}`} onClick={onClick}>
+      <BtnClose className={styles.path} />
+    </button>
+  );
+};
+
+export { ButtonNav, ButtonWeb, ButtonAction };

@@ -1,0 +1,74 @@
+@import "sass/main";
+
+.item {
+    position: relative;
+    width: 100%;
+    padding-top: 70%;
+    overflow: hidden;
+    cursor: pointer;
+
+    .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover .video {
+        opacity: 1;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 13, 13, 0.82);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+}
+
+.modalContent {
+    position: relative;
+    width: 80%;
+    max-width: 1400px;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.modalVideo {
+    width: 100%;
+    height: auto;
+    background-color: color("Dark");
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
