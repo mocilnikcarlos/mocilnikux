@@ -26,6 +26,7 @@ const VideoThumbnail = ({
         width={1}
         height={1}
         className={styles.img}
+        priority
       />
       <video
         ref={videoRef}
