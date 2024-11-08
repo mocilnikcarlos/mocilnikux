@@ -3,7 +3,7 @@ import GalleryImageIa from "./components/galleryimagesia";
 import ImageHero from "@/components/componentspages/imagehero";
 import IaDescription from "./components/iadescription";
 import Footer from "@/components/footer/footer";
-import LoadingWrapper from "@/components/helper/loadingwrapper";
+import LoadingWrapper from "@/components/utils/loadingwrapper";
 
 const ImagesIa = () => {
   return (
