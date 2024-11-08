@@ -6,11 +6,12 @@ import Gallery from "./components/gallery";
 import styles from "./page.module.scss";
 import Contact from "./components/contact";
 import Footer from "@/components/footer/footer";
+import Preload from "@/components/utils/preloadcomponent";
 
 const Portfolio = () => {
   const { projects, loading, error } = useProjects();
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Preload />;
   if (error) return <div>Error: {error}</div>;
 
   const firstGalleryImages = projects.slice(0, 4);

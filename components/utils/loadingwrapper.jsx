@@ -14,12 +14,7 @@ const LoadingWrapper = ({ children }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  return (
-    <>
-      {loading && <Loader />}
-      {!loading && children}
-    </>
-  );
+  return <>{loading ? <Loader isLoading={loading} /> : children} </>;
 };
 
 export default LoadingWrapper;

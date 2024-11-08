@@ -1,13 +1,14 @@
 "use client";
-
 import { useVideo } from "@/components/hook/useVideo";
 import VideoThumbnail from "@/components/video/videothumbnail";
 import ModalVideo from "@/components/video/modalvideo";
 import useMedia from "@/components/hook/useMedia";
 import styles from "./galleryvideo.module.scss";
+import Preload from "@/components/utils/preloadcomponent";
 
 const GalleryVideo = () => {
   const { images, loading, error } = useMedia();
+
   const {
     currentVideo,
     isModalOpen,
@@ -17,6 +18,9 @@ const GalleryVideo = () => {
     handleMouseLeave,
     videoRefs,
   } = useVideo();
+
+  if (loading) return <Preload />;
+  if (error) return <div>Error: {error}</div>;
 
   const handleOutsideClick = (e) => {
     if (e.target === e.currentTarget) {

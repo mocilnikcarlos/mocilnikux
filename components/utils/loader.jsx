@@ -3,10 +3,12 @@
 import { useEffect, useState } from "react";
 import styles from "./loader.module.scss";
 
-const Loader = () => {
+const Loader = ({ isLoading }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    if (!isLoading) return;
+
     const totalDuration = 2000;
     const intervalDuration = 10;
     const increment = (intervalDuration / totalDuration) * 180;
@@ -22,7 +24,7 @@ const Loader = () => {
     }, intervalDuration);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isLoading]);
 
   return (
     <div className={styles.loader}>

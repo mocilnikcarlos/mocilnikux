@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 import { supabase } from "@/components/lib/supabaseclient";
 
@@ -15,11 +16,13 @@ const useMedia = () => {
 
       if (error) {
         setError(error.message);
+        setLoading(false);
         console.error("Error fetching gallery data:", error.message);
         return;
       }
 
       setImages(data);
+      setLoading(false);
     };
 
     fetchMedia();
