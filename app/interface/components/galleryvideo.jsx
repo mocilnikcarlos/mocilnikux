@@ -3,7 +3,7 @@
 import { useVideo } from "@/components/hook/useVideo";
 import VideoThumbnail from "@/components/video/videothumbnail";
 import ModalVideo from "@/components/video/modalvideo";
-import { useMedia } from "@/components/lib/fetchmedia";
+import useMedia from "@/components/lib/fetchmedia";
 import styles from "./galleryvideo.module.scss";
 
 const GalleryVideo = () => {

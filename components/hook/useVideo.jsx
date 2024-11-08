@@ -1,4 +1,4 @@
-//"use cliet";
+"use client";
 
 import { useState, useRef } from "react";
 
@@ -8,16 +8,14 @@ export const useVideo = () => {
 
   const videoRefs = useRef([]);
 
-  // Abrir el modal con el video correspondiente
   const openModal = (videoUrl) => {
     setCurrentVideo(videoUrl);
-    setIsModalOpen(true); // Actualizamos el estado para abrir el modal
+    setIsModalOpen(true);
   };
 
-  // Cerrar el modal
   const closeModal = () => {
-    setIsModalOpen(false); // Cerramos el modal
-    setCurrentVideo(null); // Limpiamos el video actual
+    setIsModalOpen(false);
+    setCurrentVideo(null);
   };
 
   const handleMouseEnter = (index) => {
