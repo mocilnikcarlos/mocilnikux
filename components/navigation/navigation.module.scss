@@ -1,12 +1,55 @@
 @import "sass/main";
 
+// Estilos de la lista de navegación
 .listnav {
     display: flex;
     gap: 32px;
 
     @include respond-to("mobile") {
         width: 100%;
-        justify-content: space-between;
-        gap: 0;
+        justify-content: flex-start;
+        gap: 48px;
+        display: flex;
+        flex-direction: column;
+        background-color: color("DarkGray");
+        position: absolute;
+        top: 84%;
+        left: 0;
+        right: 0;
+        padding: 48px 0;
+        text-align: center;
+        overflow: hidden;
+        height: auto;
+
+        transform: translateY(-16%);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            transform 0.3s ease-in-out,
+            opacity 0.3s ease-in-out,
+            visibility 0s 0.3s;
+    }
+
+    &.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        transition:
+            transform 0.3s ease-in-out,
+            opacity 0.3s ease-in-out;
+    }
+}
+
+.menuButton {
+    display: none;
+    color: color("White");
+
+    @include respond-to("mobile") {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        overflow: hidden;
     }
 }
