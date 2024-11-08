@@ -4,7 +4,7 @@ import Header from "@/components/header/header";
 import CertificateDescription from "./components/certificatedescription";
 import BodyCaseStudy from "@/components/componentspages/bodycasestudy";
 import styles from "./globalcertificate.module.scss";
-import LoadingWrapper from "@/components/helper/loadingwrapper";
+import LoadingWrapper from "@/components/utils/loadingwrapper";
 
 const images = [
   { src: "/a5bab86e-e3b8-49ef-b607-83b3b4a18286.png" },

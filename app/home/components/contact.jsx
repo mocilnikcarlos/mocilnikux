@@ -11,7 +11,6 @@ const socialLinks = [
     href: "https://www.behance.net/mocilnikux#",
     icon: <Behance />,
   },
-  // Agrega más redes sociales aquí si es necesario
 ];
 
 const Contact = () => {

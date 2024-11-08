@@ -1,0 +1,11 @@
+@import "sass/main";
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include respond-to("mobile") {
+        display: flex;
+        flex-direction: column;
+    }
+}

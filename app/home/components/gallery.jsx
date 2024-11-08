@@ -10,9 +10,12 @@ const Gallery = ({ images }) => {
             href={image.href}
             key={index}
             src={image.src}
-            alt={`Imagen ${image.overlay.title} Izquierda`}
+            alt={"Project Image"}
             type={image.type}
-            overlayContent={image.overlay}
+            overlayContent={{
+              title: image.title,
+              description: image.description,
+            }}
           />
         ))}
       </div>
@@ -22,9 +25,12 @@ const Gallery = ({ images }) => {
             href={image.href}
             key={index + 2}
             src={image.src}
-            alt={`Imagen ${image.overlay.title} Derecha`}
+            alt={"Project Image"}
             type={image.type}
-            overlayContent={image.overlay}
+            overlayContent={{
+              title: image.title,
+              description: image.description,
+            }}
           />
         ))}
       </div>

@@ -1,6 +1,6 @@
 import Header from "@/components/header/header";
 import Home from "./home/page";
-import LoadingWrapper from "@/components/helper/loadingwrapper";
+import LoadingWrapper from "@/components/utils/loadingwrapper";
 
 const Page = () => {
   return (

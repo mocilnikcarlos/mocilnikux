@@ -1,76 +1,28 @@
+"use client";
+
+import useProjects from "@/components/hook/useProjects";
 import Image from "next/image";
 import Gallery from "./components/gallery";
 import styles from "./page.module.scss";
 import Contact from "./components/contact";
 import Footer from "@/components/footer/footer";
-
-const images1 = [
-  {
-    href: "/jukeapp",
-    src: "/jukeapp.png",
-    type: "large",
-    overlay: { title: "ux/ui", description: "JukeApp" },
-  },
-  {
-    href: "/tiptap",
-    src: "/tiptap.png",
-    type: "small",
-    overlay: { title: "ui", description: "Garantía de pago" },
-  },
-  {
-    href: "/clinia",
-    src: "/clinia.png",
-    type: "small",
-    overlay: { title: "ux/ui", description: "Clinia" },
-  },
-  {
-    href: "/fleet",
-    src: "/fleet.png",
-    type: "large",
-    overlay: { title: "ui", description: "FleetSolutions" },
-  },
-];
-
-const images2 = [
-  {
-    href: "/localeyez",
-    src: "/localeyez.png",
-    type: "large",
-    overlay: { title: "ui - Proyecto Bootcamp", description: "LocalEyez" },
-  },
-  {
-    href: "/plantapps",
-    src: "/plantapps.png",
-    type: "small",
-    overlay: {
-      title: "ux/ui - Proyecto Bootcamp",
-      description: "PlantApps",
-    },
-  },
-  {
-    href: "/bullmarket",
-    src: "/bullmarket.png",
-    type: "small",
-    overlay: {
-      title: "análisis heurístico - Proyecto Bootcamp",
-      description: "BullMarket",
-    },
-  },
-  {
-    href: "/pandora",
-    src: "/pandora.png",
-    type: "large",
-    overlay: { title: "ux - Proyecto Bootcamp", description: "Pandora" },
-  },
-];
+import Preload from "@/components/utils/preloadcomponent";
 
 const Portfolio = () => {
+  const { projects, loading, error } = useProjects();
+
+  if (loading) return <Preload />;
+  if (error) return <div>Error: {error}</div>;
+
+  const firstGalleryImages = projects.slice(0, 4);
+  const secondGalleryImages = projects.slice(4);
+
   return (
     <>
       <article className={styles.portfolioarticle}>
         <section className={styles.portfoliosection}>
-          <Gallery images={images1} />
-          <Gallery images={images2} />
+          <Gallery images={firstGalleryImages} />
+          <Gallery images={secondGalleryImages} />
         </section>
         <Contact />
         <section className={styles.me}>
