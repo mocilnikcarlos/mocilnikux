@@ -10,15 +10,14 @@
     padding-bottom: 32px;
     transition:
         background-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out,
         padding-top 0.3s ease-in-out;
 
     &.blurred {
         background-color: rgba(38, 38, 38, 0.82);
         backdrop-filter: blur(12px);
         padding-top: 32px;
-        transition:
-            background-color 0.3s ease-in-out,
-            padding-top 0.3s ease-in-out;
+        transition: padding-top 0.3s ease-in-out;
     }
 
     @include respond-to("mobile") {
@@ -37,6 +36,5 @@
         gap: 16px;
         width: 100%;
         align-items: center;
-        overflow: hidden;
     }
 }
