@@ -1,3 +1,4 @@
+"use client";
 import Footer from "@/components/footer/footer";
 import ImageHero from "@/components/componentspages/imagehero";
 import JobDescription from "@/components/componentspages/jobdescription";
@@ -5,33 +6,53 @@ import BodyCaseStudy from "@/components/componentspages/bodycasestudy";
 import TiptapLogo from "@/components/svg/tiptap";
 import styles from "./globalpages.module.scss";
 import LinkWeb from "@/components/componentspages/linkweb";
+import Preload from "@/components/utils/preloadcomponent";
+import ErrorComponent from "@/components/utils/error";
+import useCaseStudy from "@/components/hook/useCaseStudy";
+import useDescriptionProject from "@/components/hook/useDescriptionProject";
 
-const descriptions = ["Tiptap", "Diseño UI", "Figma, Vuexy"];
+const TipTap = ({ projectId }) => {
+  const {
+    caseStudy,
+    loading: loadingCaseStudy,
+    error: errorCaseStudy,
+  } = useCaseStudy(projectId);
 
-const details = {
-  description: `El producto es completamente personalizado, desarrollado en etapas y perfeccionado a través de múltiples reuniones. No se trata de un producto convencional; fui convocado principalmente para diseñar una interfaz de usuario dentro del ecosistema de Tiptap y proporcionar una herramienta de gestión para los colegios que son clientes de Tiptap.`,
-};
+  const {
+    descriptionProject,
+    loading: loadingDescription,
+    error: errorDescription,
+  } = useDescriptionProject(projectId);
 
-const images = [
-  { src: "/imgtiptap1.png" },
-  { src: "/imgtiptap2.png" },
-  { src: "/imgtiptap3.png" },
-  { src: "/imgtiptap4.png" },
-  { src: "/imgtiptap5.png" },
-  { src: "/imgtiptap6.png" },
-  { src: "/imgtiptap7.png" },
-  { src: "/imgtiptap8.png" },
-];
+  if (loadingCaseStudy || loadingDescription) {
+    return <Preload />;
+  }
 
-const TipTap = () => {
+  if (errorCaseStudy || errorDescription) {
+    return <ErrorComponent />;
+  }
+
+  const descriptions = [
+    descriptionProject.client || "Cliente no disponible",
+    descriptionProject.responsability || "Responsabilidad no disponible",
+    descriptionProject.tools || "Herramientas no disponibles",
+  ];
+
+  const images = caseStudy?.map((study) => ({ src: study.image_url })) || [];
+
   return (
     <>
       <article>
         <ImageHero
-          backgroundImage="/tiptap.png"
+          backgroundImage={
+            descriptionProject?.image_url || "/default-image.png"
+          }
           LogoComponent={<TiptapLogo />}
         />
-        <JobDescription descriptions={descriptions} details={details} />
+        <JobDescription
+          descriptions={descriptions}
+          details={descriptionProject?.detail || "Detalles no disponibles"}
+        />
         <BodyCaseStudy images={images} />
       </article>
       <Footer className={styles.footer}>

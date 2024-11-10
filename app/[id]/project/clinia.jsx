@@ -1,3 +1,4 @@
+"use client";
 import Footer from "@/components/footer/footer";
 import ImageHero from "@/components/componentspages/imagehero";
 import JobDescription from "@/components/componentspages/jobdescription";
@@ -5,39 +6,53 @@ import BodyCaseStudy from "@/components/componentspages/bodycasestudy";
 import CliniaLogo from "@/components/svg/clinia";
 import styles from "./globalpages.module.scss";
 import LinkWeb from "@/components/componentspages/linkweb";
+import Preload from "@/components/utils/preloadcomponent";
+import ErrorComponent from "@/components/utils/error";
+import useCaseStudy from "@/components/hook/useCaseStudy";
+import useDescriptionProject from "@/components/hook/useDescriptionProject";
 
-const descriptions = ["Clinia", "Rediseño UX/UI", "Figma"];
+const Clinia = ({ projectId }) => {
+  const {
+    caseStudy,
+    loading: loadingCaseStudy,
+    error: errorCaseStudy,
+  } = useCaseStudy(projectId);
 
-const details = {
-  description: `Diseñe este gestor para clínicas privadas, preparado para atender las necesidades de doctores de todas las especialidades. Fue un proyecto muy enriquecedor y educativo que, aunque se detuvo por falta de financiamiento, quedó funcional. Solo requiere la aprobación del gobierno a través de un proceso burocrático para ser aceptado y utilizado.`,
-};
+  const {
+    descriptionProject,
+    loading: loadingDescription,
+    error: errorDescription,
+  } = useDescriptionProject(projectId);
 
-const images = [
-  { src: "/imgclinia1.png" },
-  { src: "/imgclinia2.png" },
-  { src: "/imgclinia3.png" },
-  { src: "/imgclinia4.png" },
-  { src: "/imgclinia5.png" },
-  { src: "/imgclinia6.png" },
-  { src: "/imgclinia7.png" },
-  { src: "/imgclinia8.png" },
-  { src: "/imgclinia9.png" },
-  { src: "/imgclinia10.png" },
-  { src: "/imgclinia11.png" },
-  { src: "/imgclinia12.png" },
-  { src: "/imgclinia13.png" },
-  { src: "/imgclinia14.png" },
-];
+  if (loadingCaseStudy || loadingDescription) {
+    return <Preload />;
+  }
 
-const Clinia = () => {
+  if (errorCaseStudy || errorDescription) {
+    return <ErrorComponent />;
+  }
+
+  const descriptions = [
+    descriptionProject.client || "Cliente no disponible",
+    descriptionProject.responsability || "Responsabilidad no disponible",
+    descriptionProject.tools || "Herramientas no disponibles",
+  ];
+
+  const images = caseStudy?.map((study) => ({ src: study.image_url })) || [];
+
   return (
     <>
       <article>
         <ImageHero
-          backgroundImage="/clinia.png"
+          backgroundImage={
+            descriptionProject?.image_url || "/default-image.png"
+          }
           LogoComponent={<CliniaLogo />}
         />
-        <JobDescription descriptions={descriptions} details={details} />
+        <JobDescription
+          descriptions={descriptions}
+          details={descriptionProject?.detail || "Detalles no disponibles"}
+        />
         <BodyCaseStudy images={images} />
       </article>
       <Footer className={styles.footer}>

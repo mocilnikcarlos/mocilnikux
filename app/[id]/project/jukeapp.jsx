@@ -11,6 +11,7 @@ import useCaseStudy from "@/components/hook/useCaseStudy";
 import Preload from "@/components/utils/preloadcomponent";
 import useDescriptionProject from "@/components/hook/useDescriptionProject";
 import usePrototype from "@/components/hook/usePrototype";
+import ErrorComponent from "@/components/utils/error";
 
 const JukeApp = ({ projectId }) => {
   const {
@@ -31,12 +32,12 @@ const JukeApp = ({ projectId }) => {
     error: errorPrototype,
   } = usePrototype(projectId);
 
-  if (loadingCaseStudy || loadingDescription) {
+  if (loadingCaseStudy || loadingDescription || loadingPrototype) {
     return <Preload />;
   }
 
-  if (errorCaseStudy || errorDescription) {
-    return <div>Error: {errorCaseStudy || errorDescription}</div>;
+  if (errorCaseStudy || errorDescription || errorPrototype) {
+    return <ErrorComponent />;
   }
 
   const descriptions = [
