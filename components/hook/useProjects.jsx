@@ -11,7 +11,7 @@ const useProjects = () => {
     const fetchProjects = async () => {
       const { data, error } = await supabase
         .from("gallery_project")
-        .select("id, href, src, type, title, description")
+        .select("id, project_id, href, src, type, title, description")
         .order("id", { ascending: true });
 
       if (error) {

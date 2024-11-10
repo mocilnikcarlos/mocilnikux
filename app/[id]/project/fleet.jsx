@@ -1,3 +1,4 @@
+"use client";
 import Footer from "@/components/footer/footer";
 import ImageHero from "@/components/componentspages/imagehero";
 import JobDescription from "@/components/componentspages/jobdescription";
@@ -5,32 +6,53 @@ import BodyCaseStudy from "@/components/componentspages/bodycasestudy";
 import FleetLogo from "@/components/svg/fleet";
 import styles from "./globalpages.module.scss";
 import LinkWeb from "@/components/componentspages/linkweb";
+import Preload from "@/components/utils/preloadcomponent";
+import ErrorComponent from "@/components/utils/error";
+import useCaseStudy from "@/components/hook/useCaseStudy";
+import useDescriptionProject from "@/components/hook/useDescriptionProject";
 
-const descriptions = ["FleetSolutions", "Diseño UI", "Figma, Vuexy"];
+const Fleet = ({ projectId }) => {
+  const {
+    caseStudy,
+    loading: loadingCaseStudy,
+    error: errorCaseStudy,
+  } = useCaseStudy(projectId);
 
-const details = {
-  description: `Un producto muy simple y personalizado a medida. Fui creándolo a medida que los stakeholder lo iban probándolo. Eso implicó que la idea original cambio bastante al producto final.
+  const {
+    descriptionProject,
+    loading: loadingDescription,
+    error: errorDescription,
+  } = useDescriptionProject(projectId);
 
-    Fue dividido en dos etapas. La primera constaba de la gestión, registrar cliente, vehículo y agendar una fecha para el mantenimiento. La segunda en agregar Maxtracker, un sistema que registra los kilómetros recorridos`,
-};
+  if (loadingCaseStudy || loadingDescription) {
+    return <Preload />;
+  }
 
-const images = [
-  { src: "/imgfleet1.png" },
-  { src: "/imgfleet2.png" },
-  { src: "/imgfleet3.png" },
-  { src: "/imgfleet4.png" },
-  { src: "/imgfleet5.png" },
-  { src: "/imgfleet6.png" },
-  { src: "/imgfleet7.png" },
-  { src: "/imgfleet8.png" },
-];
+  if (errorCaseStudy || errorDescription) {
+    return <ErrorComponent />;
+  }
 
-const Fleet = () => {
+  const descriptions = [
+    descriptionProject.client || "Cliente no disponible",
+    descriptionProject.responsability || "Responsabilidad no disponible",
+    descriptionProject.tools || "Herramientas no disponibles",
+  ];
+
+  const images = caseStudy?.map((study) => ({ src: study.image_url })) || [];
+
   return (
     <>
       <article>
-        <ImageHero backgroundImage="/fleet.png" LogoComponent={<FleetLogo />} />
-        <JobDescription descriptions={descriptions} details={details} />
+        <ImageHero
+          backgroundImage={
+            descriptionProject?.image_url || "/default-image.png"
+          }
+          LogoComponent={<FleetLogo />}
+        />
+        <JobDescription
+          descriptions={descriptions}
+          details={descriptionProject?.detail || "Detalles no disponibles"}
+        />
         <BodyCaseStudy images={images} />
       </article>
       <Footer className={styles.footer}>

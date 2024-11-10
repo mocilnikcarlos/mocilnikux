@@ -1,3 +1,4 @@
+"use client";
 import Footer from "@/components/footer/footer";
 import ImageHero from "@/components/componentspages/imagehero";
 import JobDescription from "@/components/componentspages/jobdescription";
@@ -6,63 +7,62 @@ import JukeAppLogo from "@/components/svg/jukeapp";
 import styles from "./globalpages.module.scss";
 import ListFooter from "@/components/componentspages/listfooter";
 import LinkWeb from "@/components/componentspages/linkweb";
+import useCaseStudy from "@/components/hook/useCaseStudy";
+import Preload from "@/components/utils/preloadcomponent";
+import useDescriptionProject from "@/components/hook/useDescriptionProject";
+import usePrototype from "@/components/hook/usePrototype";
+import ErrorComponent from "@/components/utils/error";
 
-const descriptions = ["JukeApp (NAVI)", "Rediseño UX/UI", "Figma"];
+const JukeApp = ({ projectId }) => {
+  const {
+    caseStudy,
+    loading: loadingCaseStudy,
+    error: errorCaseStudy,
+  } = useCaseStudy(projectId);
 
-const details = {
-  description: `JukeApp es un TMS logístico que gestiona paquetes de Mercado Libre y otros vendedores. También proporciona una app para que los repartidores realicen colectas y entregas.
+  const {
+    descriptionProject,
+    loading: loadingDescription,
+    error: errorDescription,
+  } = useDescriptionProject(projectId);
 
-  Rediseñé el proyecto debido a que el original presentaba incoherencia en los flujos y la UI.`,
-};
+  const {
+    prototype,
+    loading: loadingPrototype,
+    error: errorPrototype,
+  } = usePrototype(projectId);
 
-const images = [
-  { src: "/imgjukeapp1.png" },
-  { src: "/imgjukeapp2.png" },
-  { src: "/imgjukeapp3.png" },
-  { src: "/imgjukeapp4.png" },
-  { src: "/imgjukeapp5.png" },
-  { src: "/imgjukeapp6.png" },
-  { src: "/imgjukeapp7.png" },
-  { src: "/imgjukeapp8.png" },
-  { src: "/imgjukeapp9.png" },
-  { src: "/imgjukeapp10.png" },
-  { src: "/imgjukeapp11.png" },
-  { src: "/imgjukeapp12.png" },
-  { src: "/imgjukeapp13.png" },
-];
+  if (loadingCaseStudy || loadingDescription || loadingPrototype) {
+    return <Preload />;
+  }
 
-const buttonData = [
-  {
-    href: "https://www.figma.com/proto/073b2MgOsbdKPFk5NH4AMn/2023Sept.-JukeApp-v1.?node-id=10370-135840&node-type=frame&viewport=427%2C274%2C0.06&t=wuOaQTMDe0cxxc5J-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=10370%3A135840",
-    label: "Ruta de colecta App",
-  },
-  {
-    href: "https://www.figma.com/proto/073b2MgOsbdKPFk5NH4AMn/2023Sept.-JukeApp-v1.?node-id=3037-30355&node-type=frame&viewport=333%2C-361%2C0.02&t=wuOaQTMDe0cxxc5J-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=3037%3A30355",
-    label: "Crear orden",
-  },
-  {
-    href: "https://www.figma.com/proto/073b2MgOsbdKPFk5NH4AMn/2023Sept.-JukeApp-v1.?node-id=1343-6420&node-type=frame&viewport=227%2C242%2C0.02&t=wuOaQTMDe0cxxc5J-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1343%3A6420",
-    label: "Crear ruta de colecta",
-  },
-  {
-    href: "https://www.figma.com/proto/073b2MgOsbdKPFk5NH4AMn/2023Sept.-JukeApp-v1.?node-id=3796-27400&node-type=frame&viewport=392%2C236%2C0.06&t=wuOaQTMDe0cxxc5J-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=3796%3A27400",
-    label: "Zona de entrega",
-  },
-  {
-    href: "https://www.figma.com/proto/073b2MgOsbdKPFk5NH4AMn/2023Sept.-JukeApp-v1.?node-id=7854-9189&node-type=frame&viewport=370%2C321%2C0.1&t=wuOaQTMDe0cxxc5J-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=7854%3A9189",
-    label: "Mi perfil",
-  },
-];
+  if (errorCaseStudy || errorDescription || errorPrototype) {
+    return <ErrorComponent />;
+  }
 
-const JukeApp = () => {
+  const descriptions = [
+    descriptionProject.client || "Cliente no disponible",
+    descriptionProject.responsability || "Responsabilidad no disponible",
+    descriptionProject.tools || "Herramientas no disponibles",
+  ];
+
+  const images = caseStudy?.map((study) => ({ src: study.image_url })) || [];
+  const buttonData =
+    prototype?.map((proto) => ({ href: proto.href, label: proto.label })) || [];
+
   return (
     <>
       <article>
         <ImageHero
-          backgroundImage="/jukeapp.png"
+          backgroundImage={
+            descriptionProject?.image_url || "/default-image.png"
+          }
           LogoComponent={<JukeAppLogo />}
         />
-        <JobDescription descriptions={descriptions} details={details} />
+        <JobDescription
+          descriptions={descriptions}
+          details={descriptionProject?.detail || "Detalles no disponibles"}
+        />
         <BodyCaseStudy images={images} />
       </article>
       <Footer className={styles.footer}>

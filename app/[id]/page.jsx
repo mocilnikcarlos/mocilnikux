@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { getProjectId } from "@/components/utils/getProjectId";
 import JukeApp from "./project/jukeapp";
 import Clinia from "./project/clinia";
 import Fleet from "./project/fleet";
@@ -10,22 +11,14 @@ import PlantApps from "./project/plantapps";
 import Header from "@/components/header/header";
 import LoadingWrapper from "@/components/utils/loadingwrapper";
 
-export async function generateStaticParams() {
-  const projects = [
-    "jukeapp",
-    "tiptap",
-    "clinia",
-    "fleet",
-    "localeyez",
-    "plantapps",
-    "bullmarket",
-    "pandora",
-  ];
-  return projects.map((project) => ({ id: project }));
-}
-
-const ProjectPage = ({ params }) => {
+export default async function ProjectPage({ params }) {
   const { id } = params;
+
+  const projectId = await getProjectId(id);
+
+  if (!projectId) {
+    notFound();
+  }
 
   const projectComponents = {
     jukeapp: JukeApp,
@@ -48,10 +41,8 @@ const ProjectPage = ({ params }) => {
     <LoadingWrapper>
       <Header />
       <main>
-        <ProjectComponent />
+        <ProjectComponent projectId={projectId} />
       </main>
     </LoadingWrapper>
   );
-};
-
-export default ProjectPage;
+}

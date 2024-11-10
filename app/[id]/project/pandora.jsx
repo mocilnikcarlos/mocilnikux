@@ -1,37 +1,56 @@
+"use client";
 import Footer from "@/components/footer/footer";
 import ImageHero from "@/components/componentspages/imagehero";
 import JobDescription from "@/components/componentspages/jobdescription";
 import BodyCaseStudy from "@/components/componentspages/bodycasestudy";
 import PandoraLogo from "@/components/svg/pandora";
+import Preload from "@/components/utils/preloadcomponent";
+import ErrorComponent from "@/components/utils/error";
+import useCaseStudy from "@/components/hook/useCaseStudy";
+import useDescriptionProject from "@/components/hook/useDescriptionProject";
 
-const descriptions = [
-  "Pandora",
-  "Arquitectura de la información",
-  "Figma, Optimal Workshop",
-];
+const Pandora = ({ projectId }) => {
+  const {
+    caseStudy,
+    loading: loadingCaseStudy,
+    error: errorCaseStudy,
+  } = useCaseStudy(projectId);
 
-const details = {
-  description: `Se trata de un análisis de usabilidad de la web de Pandora para crear una nueva arquitectura de la información. Este proyecto pertenece al Bootcamp de UX/UI Open.`,
-};
+  const {
+    descriptionProject,
+    loading: loadingDescription,
+    error: errorDescription,
+  } = useDescriptionProject(projectId);
 
-const images = [
-  { src: "/imgpandora1.png" },
-  { src: "/imgpandora2.png" },
-  { src: "/imgpandora3.png" },
-  { src: "/imgpandora4.png" },
-  { src: "/imgpandora5.png" },
-  { src: "/imgpandora6.png" },
-];
+  if (loadingCaseStudy || loadingDescription) {
+    return <Preload />;
+  }
 
-const Pandora = () => {
+  if (errorCaseStudy || errorDescription) {
+    return <ErrorComponent />;
+  }
+
+  const descriptions = [
+    descriptionProject.client || "Cliente no disponible",
+    descriptionProject.responsability || "Responsabilidad no disponible",
+    descriptionProject.tools || "Herramientas no disponibles",
+  ];
+
+  const images = caseStudy?.map((study) => ({ src: study.image_url })) || [];
+
   return (
     <>
       <article>
         <ImageHero
-          backgroundImage="/pandora.png"
+          backgroundImage={
+            descriptionProject?.image_url || "/default-image.png"
+          }
           LogoComponent={<PandoraLogo />}
         />
-        <JobDescription descriptions={descriptions} details={details} />
+        <JobDescription
+          descriptions={descriptions}
+          details={descriptionProject?.detail || "Detalles no disponibles"}
+        />
         <BodyCaseStudy images={images} />
       </article>
       <Footer />

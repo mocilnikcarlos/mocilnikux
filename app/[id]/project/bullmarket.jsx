@@ -1,41 +1,56 @@
+"use client";
 import Footer from "@/components/footer/footer";
 import ImageHero from "@/components/componentspages/imagehero";
 import JobDescription from "@/components/componentspages/jobdescription";
 import BodyCaseStudy from "@/components/componentspages/bodycasestudy";
 import BullMarketLogo from "@/components/svg/bullmarket";
+import Preload from "@/components/utils/preloadcomponent";
+import ErrorComponent from "@/components/utils/error";
+import useCaseStudy from "@/components/hook/useCaseStudy";
+import useDescriptionProject from "@/components/hook/useDescriptionProject";
 
-const descriptions = [
-  "BullMarket",
-  "Análisis heurístico",
-  "Figma, Google Sheets",
-];
+const BullMarket = ({ projectId }) => {
+  const {
+    caseStudy,
+    loading: loadingCaseStudy,
+    error: errorCaseStudy,
+  } = useCaseStudy(projectId);
 
-const details = {
-  description: `Se trata de un proceso de análisis heurístico para BullMarket como parte del proceso del Bootcamp en UX/UI Open`,
-};
+  const {
+    descriptionProject,
+    loading: loadingDescription,
+    error: errorDescription,
+  } = useDescriptionProject(projectId);
 
-const images = [
-  { src: "/imgbullmarket1.png" },
-  { src: "/imgbullmarket2.png" },
-  { src: "/imgbullmarket3.png" },
-  { src: "/imgbullmarket4.png" },
-  { src: "/imgbullmarket5.png" },
-  { src: "/imgbullmarket6.png" },
-  { src: "/imgbullmarket7.png" },
-  { src: "/imgbullmarket8.png" },
-  { src: "/imgbullmarket9.png" },
-  { src: "/imgbullmarket10.png" },
-];
+  if (loadingCaseStudy || loadingDescription) {
+    return <Preload />;
+  }
 
-const BullMarket = () => {
+  if (errorCaseStudy || errorDescription) {
+    return <ErrorComponent />;
+  }
+
+  const descriptions = [
+    descriptionProject.client || "Cliente no disponible",
+    descriptionProject.responsability || "Responsabilidad no disponible",
+    descriptionProject.tools || "Herramientas no disponibles",
+  ];
+
+  const images = caseStudy?.map((study) => ({ src: study.image_url })) || [];
+
   return (
     <>
       <article>
         <ImageHero
-          backgroundImage="/bullmarket.png"
+          backgroundImage={
+            descriptionProject?.image_url || "/default-image.png"
+          }
           LogoComponent={<BullMarketLogo />}
         />
-        <JobDescription descriptions={descriptions} details={details} />
+        <JobDescription
+          descriptions={descriptions}
+          details={descriptionProject?.detail || "Detalles no disponibles"}
+        />
         <BodyCaseStudy images={images} />
       </article>
       <Footer />
