@@ -3,6 +3,10 @@ import styles from "./jobdescription.module.scss";
 const JobDescription = ({ descriptions, details }) => {
   const titles = ["Cliente:", "Responsabilidad:", "Herramientas:"];
 
+  const formattedDescription = details
+    ? details.replace(/(\r\n|\n|\r)/g, "<br />")
+    : "Descripción no disponible";
+
   return (
     <section className={styles.sectionJobDescription}>
       <div className={styles.contentJobDescription}>
@@ -16,14 +20,10 @@ const JobDescription = ({ descriptions, details }) => {
         </ul>
         <div className={styles.detailsDescription}>
           <h3 className={styles.title}>Detalle:</h3>
-          <p className={styles.descriptonDetails}>
-            {details.description.split("\n").map((line, index) => (
-              <span key={index}>
-                {line}
-                <br />
-              </span>
-            ))}
-          </p>
+          <p
+            className={styles.descriptonDetails}
+            dangerouslySetInnerHTML={{ __html: formattedDescription }}
+          />
         </div>
       </div>
     </section>
