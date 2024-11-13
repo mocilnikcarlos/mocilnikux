@@ -12,7 +12,7 @@ const useMedia = () => {
       const { data, error } = await supabase
         .from("interface")
         .select("image, video_url")
-        .order("id", { ascending: true });
+        .order("id", { ascending: false });
 
       if (error) {
         setError(error.message);
