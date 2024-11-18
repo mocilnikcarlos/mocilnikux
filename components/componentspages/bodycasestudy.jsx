@@ -12,7 +12,7 @@ const BodyCaseStudy = ({ images }) => {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.1, // Cuando el 10% de la imagen es visible
+      threshold: 0.1,
     };
 
     const observer = new IntersectionObserver((entries) => {
