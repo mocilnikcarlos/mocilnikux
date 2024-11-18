@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react"; // Asegúrate de importar estos hooks
 import ImageHero from "@/components/componentspages/imagehero";
 import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
@@ -9,11 +10,25 @@ import LoadingWrapper from "@/components/utils/loadingwrapper";
 import useCertificates from "@/components/hook/useCertificates";
 import Preload from "@/components/utils/preloadcomponent";
 import ErrorComponent from "@/components/utils/error";
+import { getImageByName } from "@/components/utils/getImageByName";
 
 const Certificates = () => {
-  const { images, loading, error } = useCertificates();
+  const { images, loading: loadingCertificates, error } = useCertificates();
 
-  if (loading) {
+  const [imageUrl, setImageUrl] = useState(null);
+  const [loadingImage, setLoadingImage] = useState(true);
+
+  useEffect(() => {
+    const fetchImage = async () => {
+      const url = await getImageByName("certificateshero");
+      setImageUrl(url);
+      setLoadingImage(false);
+    };
+
+    fetchImage();
+  }, []);
+
+  if (loadingCertificates || loadingImage) {
     return <Preload />;
   }
 
@@ -25,7 +40,7 @@ const Certificates = () => {
     <LoadingWrapper>
       <Header />
       <main>
-        <ImageHero backgroundImage={"/certificateshero.jpg"} />
+        <ImageHero backgroundImage={imageUrl} />
         <CertificateDescription />
         <BodyCaseStudy images={images} />
         <Footer className={styles.textFooter}>

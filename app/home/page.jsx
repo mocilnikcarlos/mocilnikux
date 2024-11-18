@@ -1,5 +1,5 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import useProjects from "@/components/hook/useProjects";
 import Image from "next/image";
 import Gallery from "./components/gallery";
@@ -7,11 +7,28 @@ import styles from "./page.module.scss";
 import Contact from "./components/contact";
 import Footer from "@/components/footer/footer";
 import Preload from "@/components/utils/preloadcomponent";
+import { getImageByName } from "@/components/utils/getImageByName";
 
 const Portfolio = () => {
-  const { projects, loading, error } = useProjects();
+  const { projects, loading: loadingProject, error } = useProjects();
 
-  if (loading) return <Preload />;
+  const [imageUrl, setImageUrl] = useState(null);
+  const [loadingImage, setLoadingImage] = useState(true);
+
+  useEffect(() => {
+    const fetchImage = async () => {
+      const url = await getImageByName("me");
+      setImageUrl(url);
+      setLoadingImage(false);
+    };
+
+    fetchImage();
+  }, []);
+
+  if (loadingProject || loadingImage) {
+    return <Preload />;
+  }
+
   if (error) return <div>Error: {error}</div>;
 
   const firstGalleryImages = projects.slice(0, 4);
@@ -27,7 +44,7 @@ const Portfolio = () => {
         <Contact />
         <section className={styles.me}>
           <Image
-            src={"/me.png"}
+            src={imageUrl}
             alt="Me"
             width={500}
             height={500}
