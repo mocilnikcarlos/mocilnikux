@@ -29,7 +29,7 @@ const IaDescription = () => {
             artificial como parte de mis experimentaciones creativas. Aunque a
             veces las incorporo en proyectos específicos, la mayoría son fruto
             de mi pasión por el arte digital. Algunas de estas piezas están
-            disponibles en Adobe Store
+            disponibles en Adobe Stock
           </p>
         </div>
       </div>
