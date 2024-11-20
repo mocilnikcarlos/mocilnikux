@@ -10,6 +10,7 @@ import Pandora from "./project/pandora";
 import PlantApps from "./project/plantapps";
 import Header from "@/components/header/header";
 import LoadingWrapper from "@/components/utils/loadingwrapper";
+import FooterProjects from "@/components/componentspages/footerprojects";
 
 export default async function ProjectPage({ params }) {
   const { id } = params;
@@ -42,6 +43,7 @@ export default async function ProjectPage({ params }) {
       <Header />
       <main>
         <ProjectComponent projectId={projectId} />
+        <FooterProjects projectId={projectId} />
       </main>
     </LoadingWrapper>
   );

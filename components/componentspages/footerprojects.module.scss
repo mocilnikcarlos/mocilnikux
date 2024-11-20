@@ -1,0 +1,27 @@
+@import "sass/main";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+
+    @include respond-to("mobile") {
+        height: 65vh;
+    }
+}
+
+.imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease-out;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.image {
+    border-radius: 10px;
+}

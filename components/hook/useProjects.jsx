@@ -12,7 +12,7 @@ const useProjects = () => {
       const { data, error } = await supabase
         .from("gallery_project")
         .select("id, project_id, href, src, type, title, description")
-        .order("id", { ascending: true });
+        .order("id", { ascending: false });
 
       if (error) {
         setError(error.message);

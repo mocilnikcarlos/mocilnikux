@@ -8,6 +8,7 @@ import Contact from "./components/contact";
 import Footer from "@/components/footer/footer";
 import Preload from "@/components/utils/preloadcomponent";
 import { getImageByName } from "@/components/utils/getImageByName";
+import ErrorComponent from "@/components/utils/error";
 
 const Portfolio = () => {
   const { projects, loading: loadingProject, error } = useProjects();
@@ -29,7 +30,7 @@ const Portfolio = () => {
     return <Preload />;
   }
 
-  if (error) return <div>Error: {error}</div>;
+  if (error) return <ErrorComponent />;
 
   const firstGalleryImages = projects.slice(0, 4);
   const secondGalleryImages = projects.slice(4);
