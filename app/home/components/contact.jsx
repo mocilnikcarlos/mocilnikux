@@ -13,7 +13,7 @@ const socialLinks = [
   },
 ];
 
-const Contact = () => {
+const ContactShared = () => {
   return (
     <section className={styles.sectionContact}>
       <div className={styles.contentContact}>
@@ -37,4 +37,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactShared;

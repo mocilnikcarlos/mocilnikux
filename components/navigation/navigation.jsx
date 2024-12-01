@@ -9,7 +9,7 @@ const navItems = [
   { id: 2, label: "Interfaz", href: "/interface" },
   { id: 3, label: "Imágenes IA", href: "/imagesia" },
   { id: 4, label: "Certificados", href: "/certificates" },
-  // { id: 5, label: "Hablemos", href: "/contact" },
+  { id: 5, label: "Hablemos", href: "/contact" },
 ];
 
 const Navigation = () => {
