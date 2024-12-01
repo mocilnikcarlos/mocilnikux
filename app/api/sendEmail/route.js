@@ -4,8 +4,18 @@ export async function POST(req) {
   const { name, email, company, description, selectedOption } =
     await req.json();
 
+  // const transporter = nodemailer.createTransport({
+  //   service: "gmail",
+  //   auth: {
+  //     user: process.env.GMAIL_USER,
+  //     pass: process.env.GMAIL_PASS,
+  //   },
+  // });
+
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
     auth: {
       user: process.env.GMAIL_USER,
       pass: process.env.GMAIL_PASS,
