@@ -1,0 +1,24 @@
+@import "sass/main";
+
+.message {
+    width: 100%;
+    padding: 12px 16px;
+    color: color("White");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 14px;
+    font-weight: 400;
+
+    @include respond-to("mobile") {
+        text-align: center;
+    }
+}
+
+.button {
+    color: color("Orange");
+    font-size: 14px;
+    font-weight: 400;
+}

@@ -1,0 +1,120 @@
+@import "sass/main";
+
+.input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+
+    &:hover,
+    &.focused {
+        .label {
+            color: color("White");
+        }
+
+        .boxInput {
+            border-color: color("Orange");
+        }
+    }
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 400;
+    color: color("White");
+    transition: color 0.3s ease;
+}
+
+.boxInput {
+    border: 1px solid color("Gray");
+    padding: 12px 16px;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    user-select: none;
+    text-align: left;
+    position: relative;
+
+    &:focus,
+    &.filled {
+        color: color("White");
+        outline: none;
+    }
+
+    &.error {
+        border-color: red;
+    }
+}
+
+.selectedOption {
+    flex: 1;
+    color: color("White");
+
+    &.defaultOption {
+        color: color("Gray");
+    }
+
+    &.activeOption {
+        color: color("White");
+    }
+}
+
+.arrow {
+    font-size: 12px;
+    color: #333;
+}
+
+.optionsList {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: color("Black");
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 100;
+    margin-top: 15%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: color("White");
+
+    @include respond-to("mobile") {
+        margin-top: 21%;
+    }
+}
+
+.optionItem {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 14px;
+
+    &:hover {
+        background-color: color("Orange");
+        color: color("White");
+    }
+}
+
+.errorMessage {
+    color: red;
+    font-size: 14px;
+}

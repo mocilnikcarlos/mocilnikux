@@ -1,0 +1,56 @@
+@import "sass/main";
+
+.contentHeader {
+    position: relative;
+    width: 100%;
+    height: 491px;
+    overflow: hidden;
+    display: flex;
+}
+
+.contentSvg {
+    position: absolute;
+    background-color: rgba(13, 13, 13, 0.82);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+.svg {
+    height: 300px;
+    width: auto;
+    opacity: 0.2;
+}
+
+.titleDivider {
+    background-color: color("Dark");
+    width: 100%;
+    padding: 48px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    @include respond-to("mobile") {
+        padding: 48px 16px;
+    }
+}
+
+.title,
+.body {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.title {
+    color: color("Orange");
+}
+
+.body {
+    color: color("White");
+}
