@@ -4,14 +4,6 @@ export async function POST(req) {
   const { name, email, company, description, selectedOption } =
     await req.json();
 
-  // const transporter = nodemailer.createTransport({
-  //   service: "gmail",
-  //   auth: {
-  //     user: process.env.GMAIL_USER,
-  //     pass: process.env.GMAIL_PASS,
-  //   },
-  // });
-
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
@@ -22,21 +14,45 @@ export async function POST(req) {
     },
   });
 
-  const mailOptions = {
+  const adminMailOptions = {
     from: `"Nuevo contacto desde el portafolio" <${email}>`,
     to: "mocilnik.web@gmail.com",
     subject: `Nuevo mensaje de ${name}`,
     text: `
       Nombre: ${name}
       Correo: ${email}
-      Empresa: ${company}
+      Empresa o proyecto: ${company}
       Eligió el servicio de: ${selectedOption}
       Mensaje: ${description}
     `,
   };
 
+  const userMailOptions = {
+    from: `"Carlos de Mocilnik" <${process.env.GMAIL_USER}>`,
+    to: email,
+    subject: "Confirmación de recepción de tu mensaje",
+    text: `
+      Hola ${name},
+
+      Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto. Aquí están los detalles:
+
+      Nombre: ${name}
+      Empresa o proyecto: ${company}
+      Servicio solicitado: ${selectedOption}
+      Mensaje: ${description}
+
+      ¡Gracias por ponerte en contacto con nosotros!
+
+      Saludos,
+      El equipo de Mocilnik
+    `,
+  };
+
   try {
-    await transporter.sendMail(mailOptions);
+    await transporter.sendMail(adminMailOptions);
+
+    await transporter.sendMail(userMailOptions);
+
     return new Response(
       JSON.stringify({ message: "Correo enviado exitosamente" }),
       { status: 200 }
