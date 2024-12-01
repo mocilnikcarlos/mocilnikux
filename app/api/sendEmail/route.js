@@ -28,23 +28,23 @@ export async function POST(req) {
   };
 
   const userMailOptions = {
-    from: `"Carlos de Mocilnik" <${process.env.GMAIL_USER}>`,
+    from: `"mocilnik.ux" <${process.env.GMAIL_USER}>`,
     to: email,
     subject: "Confirmación de recepción de tu mensaje",
     text: `
-      Hola ${name},
+      Hola ${name} 👋😃
 
-      Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto. Aquí están los detalles:
+      Ya recibí tu mensaje y te respondere lo mas rápido posible. Aquí están los detalles:
 
       Nombre: ${name}
       Empresa o proyecto: ${company}
       Servicio solicitado: ${selectedOption}
       Mensaje: ${description}
 
-      ¡Gracias por ponerte en contacto con nosotros!
+      ¡Gracias por ponerte en contacto conmigo! 😊
 
       Saludos,
-      El equipo de Mocilnik
+      Carlos Alberto Mocilnik
     `,
   };
 
