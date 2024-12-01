@@ -19,11 +19,11 @@ export async function POST(req) {
     to: "mocilnik.web@gmail.com",
     subject: `Nuevo mensaje de ${name}`,
     text: `
-      Nombre: ${name}
-      Correo: ${email}
-      Empresa o proyecto: ${company}
-      Eligió el servicio de: ${selectedOption}
-      Mensaje: ${description}
+    Nombre: ${name}
+    Correo: ${email}
+    Empresa o proyecto: ${company}
+    Eligió el servicio de: ${selectedOption}
+    Mensaje: ${description}
     `,
   };
 
@@ -32,19 +32,19 @@ export async function POST(req) {
     to: email,
     subject: "Confirmación de recepción de tu mensaje",
     text: `
-      Hola ${name} 👋😃
+    Hola ${name} 👋😃
 
-      Ya recibí tu mensaje y te respondere lo mas rápido posible. Aquí están los detalles:
+    Ya recibí tu mensaje y te respondere lo mas rápido posible. Aquí están los detalles:
 
-      Nombre: ${name}
-      Empresa o proyecto: ${company}
-      Servicio solicitado: ${selectedOption}
-      Mensaje: ${description}
+    Nombre: ${name}
+    Empresa o proyecto: ${company}
+    Servicio solicitado: ${selectedOption}
+    Mensaje: ${description}
 
-      ¡Gracias por ponerte en contacto conmigo! 😊
+    ¡Gracias por ponerte en contacto conmigo! 😊
 
-      Saludos,
-      Carlos Alberto Mocilnik
+    Saludos,
+    Carlos Alberto Mocilnik
     `,
   };
 

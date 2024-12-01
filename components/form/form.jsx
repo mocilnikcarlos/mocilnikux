@@ -7,6 +7,7 @@ import CustomTextArea from "./customtextarea";
 import CustomSelect from "./customselect";
 import styles from "./form.module.scss";
 import { StatusFormError, StatusFormSuccess } from "./statusformmessage";
+import LoadingSendEmail from "./loadingsendemail";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -106,14 +107,21 @@ const Form = () => {
     if (formStatus === "error") {
       return <StatusFormError onClick={handleReset} />;
     }
+
     return (
-      <button
-        type="submit"
-        className={styles.submitButton}
-        disabled={isSubmitting}
-      >
-        {isSubmitting ? "Enviando..." : "Enviar"}
-      </button>
+      <>
+        {isSubmitting ? (
+          <LoadingSendEmail />
+        ) : (
+          <button
+            type="submit"
+            className={styles.submitButton}
+            disabled={isSubmitting}
+          >
+            Enviar
+          </button>
+        )}
+      </>
     );
   };
 
@@ -134,7 +142,7 @@ const Form = () => {
             name="email"
             placeholder="micorreo@dominio.com"
             required={true}
-            label="Correo Electrónico*"
+            label="Correo electrónico*"
             value={formData.email}
             onChange={handleChange}
             error={formErrors.email}
@@ -159,6 +167,7 @@ const Form = () => {
               "Asesoramiento",
               "Experiencia de Usuario",
               "Interfaz de usuario",
+              "Invitación a una entrevista",
             ]}
             value={formData.selectedOption}
             onChange={handleChange}
