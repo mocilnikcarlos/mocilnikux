@@ -57,7 +57,7 @@ const Contact = () => {
           />
         </section>
         <Footer className={stylesme.footer}>
-          3 Años como <span className={stylesme.span}>Diseñador UX/UI</span>{" "}
+          4 Años como <span className={stylesme.span}>Diseñador UX/UI</span>{" "}
           apasionado por transformar ideas en soluciones que conectan con las
           necesidades reales del usuario. Me especializo en el diseño centrado
           en el usuario (UCD). Mi objetivo es siempre aportar valor y hacer que
